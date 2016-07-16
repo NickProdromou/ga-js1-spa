@@ -1,10 +1,62 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
+* {
   box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+  -webkit-font-smoothing: antialiased; }
 
-// --- Your styles here ---
+h1 {
+  margin-top: 0;
+  margin-bottom: 0; }
 
+#container {
+  background: #B6B6B6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+header {
+  background: #D32F2F;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  header h1 {
+    color: #fff;
+    font-size: 2.1em;
+    margin-right: auto; }
+  header nav {
+    color: #fff;
+    font-size: .9em;
+    font-weight: lighter; }
+    header nav ul {
+      display: inline-block; }
+      header nav ul li {
+        display: inline-block;
+        margin-right: 1.2em;
+        padding: 5px 10px;
+        background: #555; }
+
+.app {
+  margin: 0 auto;
+  flex-grow: 1;
+  width: 100%;
+  background: green;
+  padding: 1.5em; }
+  .app h2 {
+    font-size: 1.4em; }
+  .app ul {
+    margin: 0 auto;
+    list-style-type: none; }
+    .app ul li {
+      color: #fff;
+      background: #323232;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 25px;
+      margin-top: 12px; }
+
+footer {
+  background: #212;
+  width: 100%; }
+  footer h1 {
+    color: #eee;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
