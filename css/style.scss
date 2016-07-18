@@ -1,7 +1,7 @@
 //variables
 
 $font-stack-family: helvetica, 'sans-serif';
-$color-primary: #D32F2F;
+$color-primary: #888;
 $color-reverse: #fff;
 
 
@@ -18,12 +18,11 @@ h1 {
 }
 
 #container {
-  background : #B6B6B6;
+  background : #fff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 //header styles
 
@@ -32,6 +31,10 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1280px;
+  padding: 1.1em;
+  margin: 0 auto;
   h1 {
   color: $color-reverse;
   font-size: 2.1em;
@@ -56,31 +59,44 @@ header {
 .app {
   margin: 0 auto;
   flex-grow: 1;
-  width: 100%;
-  background :green;
+  width: 90%;
+  background :#f1f1f1;
+  margin: 20px auto 20px auto;
   padding: 1.5em;
+  flex-direction :row;
+  max-width: 1280px;
+  padding: 1.1em;
+  box-shadow: 6px 8px 12px rgba(0,0,0,.3);
   h2 {
     font-size: 1.4em;
+    text-align: center;
   }
   ul {
     margin: 0 auto;
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
     li {
-      color :#fff;
+      color: #fff;
       background: #323232;
-      font-weight: bold;
+      font-weight: 400;
       font-size: 1.5em;
-      padding : 25px;
+      padding: 10px 20px;
       margin-top: 12px;
+      flex-wrap: nowrap;
+      border-radius:10px;
     }
   }
 }
 
 
 footer {
-  background: #212;
+  background: #555;
   width: 100%;
-  h1 {
+  max-width: 1280px;
+  padding: 1.1em;
+  margin: 0 auto;
+  p {
     color :#eee;
     text-align :center;
   }
