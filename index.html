@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>JS1 - SPA</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="https://npmcdn.com/normalize.css">
   <link rel="stylesheet" href="css/h5bp.css">
   <link rel="stylesheet" href="css/style.css">
@@ -11,49 +12,186 @@
 </head>
 <body>
 
-  <div id="container">
 
-    <header>
-        <h1><span style="font-weight:100;">key</span>base.io</h1>
-        <p>A place for productivity, and friendship.
-        <br><span style="font-size: .5em;">not for plebs</span>
-        </p>
-        <br>
+<!-- Render target -->
 
-        <nav>
-          <ul>
-          <li>Programs</li>
-          </ul>
-        </nav>
-    </header>
+<div id="app">
 
-    <section class ="app">
-      <h2>Welcome to Keybase.io (???)</h2>
-        <p>On Keybase.io, we are always adding new programs and keyboard shorcuts, because using the mouse to do things is for plebs.</p>
+
+  <!-- header render target -->
+  <section class="header">
+      <!--- header view --->
+      <div class="wrapper">
+        <header>
+            <h1><span style="font-weight:100;">Welcome text</h1>
+            <!--- nested nav view -->
+            <nav>
+              <ul>
+              <li>Programs</li>
+              </ul>
+            </nav>
+            <!--- nested nav view -->
+        </header>
+        </div>
+        <!--- header view --->
     </section>
+    <!-- header render target -->
 
 
-    <section class ="app">
-      <h2>We are always adding new programs, currently list is:</h2>
-        <ul>
-          <li>Google Chrome</li>
-          <li>Photoshop</li>
-          <li>Illustrator</li>
-          <li>Sketch</li>
-        </ul>
-    </section>
 
+
+    <!-- Main-content render target -->
+<section class="main-body-element">
+
+  <section class ="nested-page_intro">
+    <!--- Main content view --->
+    <div class="wrapper">
+      <div class="intro inner-content">
+        <h2>Intro header/welcome</h2>
+        <p>Explanation of what this app is</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Program-list view -->
+  <section class ="nested-program-list">
+    <div class="wrapper">
+      <div class="programs inner-content">
+      <h2>Program list header</h2>
+        <div class="program-grid">
+          <div>
+            <h3>program title</h2>
+            <button>View keys</button>
+          </div>
+          <div>
+            <h3>program title</h2>
+            <button>View keys</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class ="nested-key-list">
+    <div class="wrapper">
+      <div class="programs inner-content">
+      <h2>Key list header</h2>
+      <div class="filter-controls">
+        <label><input type="checkbox" id="cbox1" value="first_checkbox"> filter</label>
+        <label><input type="checkbox" id="cbox1" value="first_checkbox"> filter</label>
+        <label><input type="checkbox" id="cbox1" value="first_checkbox"> filter</label>
+        <label><input type="checkbox" id="cbox1" value="first_checkbox"> filter</label>
+      </div>
+        <div class="key-list">
+          <article class="key-item" id="index">
+            <div class="key-info">
+              <div class="main-info">
+                <h2>Command</h2>
+                <p>Category</p>
+              </div>
+
+              <div class="keyboard-shortcuts">
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+                <div class="stats">
+                  <div class="stats-container">
+                    <p>likes</p> <p>comments</p>
+                  </div>
+                </div>
+          </article>
+
+          <article class="key-item" id="index">
+            <div class="key-info">
+              <div class="main-info">
+                <h2>Command</h2>
+                <p>Category</p>
+              </div>
+
+              <div class="keyboard-shortcuts">
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+                <div class="stats">
+                  <div class="stats-container">
+                    <p>likes</p> <p>comments</p>
+                  </div>
+                </div>
+          </article>
+
+
+          <article class="key-item" id="index">
+            <div class="key-info">
+              <div class="main-info">
+                <h2>Command</h2>
+                <p>Category</p>
+              </div>
+
+              <div class="keyboard-shortcuts">
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+                <div class="result">
+                  <p>platform</p>
+                    <div class="key">
+                      <p>Hotkey</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+                <div class="stats">
+                  <div class="stats-container">
+                    <p>likes</p> <p>comments</p>
+                  </div>
+                </div>
+          </article>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+</section>
+
+
+<!--- Footer view --->
+<section class="footer">
+  <div class="wrapper">
     <footer>
-        <p>an app by a cool guy &copy;2016</p>
+        <p>Footer with credits and link to github &copy;2016</p>
     </footer>
-
-    <!-- Your HTML here -->
-
-
-
   </div>
+</section>
+</div>
 
-  <!-- DOM Utility functions -->
+
   <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -67,7 +205,6 @@
     </script>
   <script src="https://rawgit.com/jesstelford/a981e6877034231bd43b526a07b3a7b4/raw/js1-utilities.js"></script>
 
-  <!-- Our code -->
   <script src="main.js"></script>
 </body>
 </html>
