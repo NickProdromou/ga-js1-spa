@@ -115,7 +115,10 @@ section.header header {
   flex-direction: row;
   justify-content: flex-start; }
   .filter-controls label {
+    display: inline;
     margin-right: 18px; }
+    .filter-controls label input {
+      display: inline; }
 
 .key-item {
   width: 100%;
@@ -184,6 +187,12 @@ section.header header {
 .nested-details {
   background: #e6e6e6;
   padding: 20px 0; }
+  .nested-details .program {
+    margin: 20px;
+    background: #555;
+    color: #fff;
+    padding: 15px 10px;
+    text-decoration: underline; }
   .nested-details .detail-container {
     display: flex;
     flex-direction: column;
@@ -196,6 +205,8 @@ section.header header {
       margin-top: 20px; }
       .nested-details .detail-container .detail-header .col {
         flex: 1; }
+        .nested-details .detail-container .detail-header .col .program {
+          font-size: .8em; }
         .nested-details .detail-container .detail-header .col .right {
           float: right; }
       .nested-details .detail-container .detail-header .details {

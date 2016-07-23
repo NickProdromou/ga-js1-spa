@@ -166,7 +166,11 @@ section.header{
   flex-direction: row;
   justify-content: flex-start;
   label {
+    display: inline;
     margin-right: 18px;
+    input {
+      display: inline;
+    }
   }
 }
 
@@ -260,6 +264,13 @@ section.header{
 //nested details style
 
 .nested-details {
+  .program {
+   margin: 20px;
+   background: #555;
+   color :#fff;
+   padding: 15px 10px;
+   text-decoration: underline; 
+  }
   background: #e6e6e6;
   padding: 20px 0;
   .detail-container {
@@ -274,6 +285,9 @@ section.header{
       margin-top: 20px;
       .col {
         flex: 1;
+        .program {
+          font-size: .8em;
+        }
         .right {
           float: right;
         }

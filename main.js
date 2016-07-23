@@ -56,12 +56,15 @@ if (currentUser.key) {
 
 var userState = firebase.database().ref('userState/' + state.userHash + "/")
 
-
+firebase.database().ref('programs/').on('value',function(snapshot){
+  state.data = snapshot.val()
+  console.log(state.data)
+})
 
 
   firebase.database().ref('userState/' + state.userHash + "/").on('value',function(snapshot){
     var appState = snapshot.val()
-
+    state.appState = appState
 
     if (appState.detailView === false) {
       console.log("detailView is false")
@@ -69,23 +72,36 @@ var userState = firebase.database().ref('userState/' + state.userHash + "/")
     }
 
     if (appState.detailView === true && appState.listView === false) {
-      console.log("detail view is true")
-      renderDetailView(appBody)
+      var index = appState.details.currentItemIndex
+      renderDetailView(appBody,index,state.data,appState)
+      if(appState.details.currentItemIndex === 0){
+        var prevButton = document.querySelector("#prev")
+        prevButton.style.color = "#555"
+      }
+
+
       console.log(appState)
+      console.log(state.data[state.appState.currentProgram].keyList.length)
     }
 
     if(appState.currentProgram === "Photoshop" &&  appState.listView === true) {
       console.log("Current app state is photoshop")
-      renderKeyList(appBody,appState)
+      renderKeyList(appBody,appState,state.data.Photoshop)
       console.log(appState)
     }
 
+    if(appState.mac === false && appState.listView) {
+      renderKeyList(appBody,appState,state.data[appState.currentProgram])
+      renderFilteredList()
+    }
 
-    if(appState.currentProgram === "illustrator") {
+
+    if(appState.currentProgram === "illustrator" &&  appState.listView === true) {
       console.log("current app state is illustrator")
-      renderKeyList(appBody,appState)
+      renderKeyList(appBody,appState,state.data.illustrator)
       console.log(appState)
     }
+
 
 
   })
@@ -95,21 +111,48 @@ var userState = firebase.database().ref('userState/' + state.userHash + "/")
 //event handlers
 
 delegate('body','click','button', (event) => {
-  var button = event.delegateTarget.id
+  var buttonId = event.delegateTarget.id
+  var buttonClass = event.delegateTarget.classList[0]
 
-  if (button === "Photoshop" || button === "illustrator"){
-    console.log("this is the " + button + " button")
+  if (buttonId === "Photoshop" || buttonId === "illustrator"){
     userState.update({
-      settings: state.data[button].settings,
-      currentProgram: button,
+      settings: state.data[buttonId].settings,
+      currentProgram: buttonId,
       listView: true
     })
   }
 
-  if(button === "show-details") {
+  if(buttonId === "prev") {
+    if(state.appState.details.currentItemIndex !== 0) {
+      var prevNumber = state.appState.details.currentItemIndex -1
+      userState.update({
+        details: {
+          currentItemIndex : prevNumber
+        }
+      })
+    }
+  }
+
+
+  if(buttonId === "next") {
+    if(state.appState.details.currentItemIndex <= state.data[state.appState.currentProgram].keyList.length ){
+      var nextNumber = state.appState.details.currentItemIndex +1
+      userState.update({
+        details: {
+          currentItemIndex : nextNumber
+        }
+      })
+    }
+  }
+
+
+  if(buttonClass === "show-details") {
     userState.update({
       detailView : true,
-      listView : false
+      listView : false,
+      details : {
+        currentItemIndex : parseInt(buttonId),
+      }
     })
   }
 
@@ -121,6 +164,23 @@ delegate('body','click','h1', (event)=>{
   }
 })
 
+delegate('body','change','input',(event) => {
+  if(event.delegateTarget.id === "Mac") {
+    userState.update({
+      mac: false
+    })
+
+  }
+})
+
+delegate('body','click','span',(event)=>{
+  if (event.delegateTarget.id === "return") {
+    userState.update({
+      detailView: false,
+      listView: true
+    })
+  }
+})
 
 
 
@@ -192,62 +252,36 @@ function renderProgramList(item){
   </div>`
 }
 
-function renderDetailView(into) {
+function renderDetailView(into,index,state,user) {
   into.innerHTML = `<section class="nested-details">
     <div class="wrapper">
+    <span class="program" id="return">Return to ${user.currentProgram} list</span>
       <div class="detail-container">
         <div class="detail-header">
           <div class="col">
-            <button>prev</button>
+            <button id="prev">prev</button>
           </div>
           <div class="col details">
-            <h2>Command</h2>
-            <span class="program">program</span>
-            <span class="category">category</span>
+            <h2>${state[user.currentProgram].keyList[index].action}</h2>
+            <span class="category">${state[user.currentProgram].keyList[index].category}</span>
           </div>
           <div class="col">
-            <button class="right">next</button>
+            <button id="next" class="right">next</button>
           </div>
         </div>
         <div class="key-info">
           <div class="key">
-            <h4>Platform</h4>
-            <span>key</span>
+            <h4>Mac</h4>
+            <span>${state[user.currentProgram].keyList[index].macKey}</span>
           </div>
           <div class="key">
-            <h4>Platform</h4>
-            <span>Key</span>
+            <h4>Windows</h4>
+            <span>${state[user.currentProgram].keyList[index].winKey}</span>
           </div>
         </div>
           <div class="comments-list">
             <h4>Comments</h4>
-            <article class="comment">
-              <div class="avatar">
-                <img src="images/avatar.jpg" />
-              </div>
-              <div class="comment-content">
-                <p class="username">username</p>
-                <p>Comment</p>
-              </div>
-            </article>
-            <article class="comment">
-              <div class="avatar">
-                <img src="images/avatar.jpg" />
-              </div>
-              <div class="comment-content">
-                <p class="username">username</p>
-                <p>Comment</p>
-              </div>
-            </article>
-            <article class="comment">
-              <div class="avatar">
-                <img src="images/avatar.jpg" />
-              </div>
-              <div class="comment-content">
-                <p class="username">username</p>
-                <p>Comment</p>
-              </div>
-            </article>
+          ${renderComments()}
           </div>
             <div class="comment-box">
             <h3>Leave a comment</h3>
@@ -263,7 +297,19 @@ function renderDetailView(into) {
             </div>
       <div>
     </div>
-  </section>`
+  // </section>`
+}
+
+function renderComments(){
+  return `<article class="comment">
+        <div class="avatar">
+          <img src="images/avatar.jpg" />
+        </div>
+        <div class="comment-content">
+          <p class="username">username</p>
+          <p>Comment</p>
+        </div>
+      </article>`
 }
 
 function renderLoading(into) {
@@ -271,53 +317,73 @@ function renderLoading(into) {
 }
 
 
-function renderKeyList(into,state){
-  into.innerHTML = `<section class ="nested-key-list">
+function renderKeyList(into,state,program){
+  var list = `<section class ="nested-key-list">
     <div class="wrapper">
       <div class="programs inner-content">
       <h2>${state.currentProgram}</h2>
       <div class="filter-controls">
-      ${state.settings.categories.map((item)=>{
+      ${state.settings.platforms.map((item)=>{
       return `${renderFilters(item)}`
     }).join("")}
       </div>
         <div class="key-list">
-          <article class="key-item" id="index">
-            <div class="key-info">
-              <div class="main-info">
-                <h2>Command</h2>
-                <p>Category</p>
-                <button id ="show-details">See more</button>
-              </div>
-              <div class="keyboard-shortcuts">
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-                <div class="stats">
-                  <div class="stats-container">
-                    <p>likes 4</p> <p>comments 3</p>
-                  </div>
-                </div>
-          </article>
-      </div>
+        ${program.keyList.map((item)=>{
+          return `${renderKeyItems(item,state)}`
+        }).join("")}
     </div>
-  </section>
-`
+  </div>
+</section>`
+
+into.innerHTML = list
 }
 
+
+function renderKeyItems(item,state){
+  var list =`<article class="key-item" id="${item.index}">
+    <div class="key-info">
+      <div class="main-info">
+        <h2>${item.action}</h2>
+        <p>${item.category}</p>
+        <button class="show-details" id="${item.index}">See more</button>
+      </div>
+      <div class="keyboard-shortcuts">`
+      if(state.settings.mac === true){
+        console.log("does this line log?")
+        list += `
+        <div class="result">
+          <p>Mac</p>
+            <div class="key">
+              <p>${item.macKey}</p>
+            </div>
+        </div>`
+      }
+      if(state.settings.win === true){
+        list += `
+        <div class="result">
+          <p>Windows</p>
+            <div class="key">
+              <p>${item.winKey}</p>
+            </div>
+        </div>`
+      }
+      list += `
+    </div>
+  </div>
+      <div class="stats">
+        <div class="stats-container">
+          <p>likes ${item.votes}</p> <p>comments ${item.comments}</p>
+        </div>
+      </div>
+</article>`
+
+return list
+
+}
+
+
 function renderFilters(item){
-  return `<label><input type="checkbox" id="${item}" value="${item}"> ${item}</label>`
+  return `<label><input type="checkbox" checked id="${item}" value="${item}"> ${item}</label>`
 }
 
 })()

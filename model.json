@@ -4,7 +4,7 @@
       "settings" :{
         "mac":true,
         "win":true,
-        "categories":["selecting","viewing","layers","type","painting","pen tool and paths","panels","misc good stuff","tools"]
+        "platforms":["Mac","windows"]
       },
       "keyList" : [
         {
@@ -910,7 +910,7 @@
       "settings" :{
         "mac":true,
         "win":true,
-        "categories":["selecting","Path Editing","Painting and Transforming","Shapes (While Drawing)","Viewing & Guides","Type","Panel Shortcuts / Function Keys","Layers Panel Shortcuts","Color Panel Shortcuts","Swatches Panel Shortcuts","Misc","tools"]
+        "platforms":["Mac","windows"]
       },
       "keyList" : [
         {
