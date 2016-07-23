@@ -21,6 +21,15 @@ h1 {
 .inner-content {
   padding: 1%; }
 
+button {
+  border: none;
+  background: #4CAF50;
+  color: #fff;
+  padding: 10px 20px; }
+
+input {
+  display: block; }
+
 #app {
   background: #fff;
   display: flex;
@@ -71,11 +80,6 @@ section.header header {
     border-bottom: 1px solid #eee;
     display: flex;
     flex-direction: row; }
-    .program-grid div button {
-      border: none;
-      background: #4CAF50;
-      color: #fff;
-      padding: 10px 20px; }
     .program-grid div h3 {
       margin: 10px 0;
       text-align: left;
@@ -85,20 +89,26 @@ section.header header {
   padding: 10px 15px;
   margin: 25px 0;
   background: #777;
-  color: #fff; }
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+  .filter-controls label {
+    margin-right: 18px; }
 
 .key-item {
   width: 100%;
-  border-bottom: 1px solid #eee;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 35px 0; }
   .key-item .key-info {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 15px 0; }
+    padding: 1em 0; }
   .key-item .main-info {
-    flex: 1; }
+    flex: 1;
+    padding: 15px; }
     .key-item .main-info h2 {
       margin: 0; }
     .key-item .main-info p {
@@ -118,12 +128,13 @@ section.header header {
         padding: 5px;
         margin: 20px;
         margin: 10px;
-        background: #555; }
+        background: #555;
+        font-weight: bold; }
 
 .stats {
-  background: #222;
-  color: #fff;
-  padding: 5px; }
+  background: #fff;
+  padding: 5px;
+  border-top: 1px solid #000; }
   .stats .stats-container {
     display: flex;
     margin: 0;
@@ -134,6 +145,89 @@ section.header header {
     justify-content: space-around; }
     .stats .stats-container p {
       margin: 0; }
+
+.nested-latest {
+  background: #e8e8e8; }
+  .nested-latest .inner-content .article {
+    padding: 1em;
+    display: flex;
+    background: #fff;
+    box-shadow: 2px 5px 9px -1px rgba(0, 0, 0, 0.5);
+    margin: 25px 0; }
+    .nested-latest .inner-content .article .article-content {
+      flex: 1; }
+    .nested-latest .inner-content .article img {
+      max-width: 150px;
+      margin-right: 1.2em; }
+
+.nested-details {
+  background: #e6e6e6;
+  padding: 20px 0; }
+  .nested-details .detail-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    box-shadow: 2px 5px 9px -1px rgba(0, 0, 0, 0.5);
+    background: #fff; }
+    .nested-details .detail-container .detail-header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px; }
+      .nested-details .detail-container .detail-header .col {
+        flex: 1; }
+        .nested-details .detail-container .detail-header .col .right {
+          float: right; }
+      .nested-details .detail-container .detail-header .details {
+        text-align: center;
+        font-size: 1.5em; }
+        .nested-details .detail-container .detail-header .details h2, .nested-details .detail-container .detail-header .details p {
+          margin: 0; }
+    .nested-details .detail-container .key-info {
+      display: flex; }
+      .nested-details .detail-container .key-info .key {
+        flex: 1;
+        text-align: center;
+        font-size: 1.4em; }
+        .nested-details .detail-container .key-info .key span {
+          padding: 10px 30px;
+          color: #fff;
+          background: #222; }
+    .nested-details .detail-container .comments-list {
+      margin: 40px 0;
+      padding: 45px;
+      background: #f1f1f1; }
+      .nested-details .detail-container .comments-list .comment {
+        border: 1px solid #eee;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0; }
+        .nested-details .detail-container .comments-list .comment img {
+          max-width: 120px;
+          margin-right: 15px; }
+        .nested-details .detail-container .comments-list .comment .comment-content {
+          padding: 5px; }
+          .nested-details .detail-container .comments-list .comment .comment-content .username {
+            font-size: .8em; }
+    .nested-details .detail-container .comment-box {
+      display: flex;
+      flex-direction: column;
+      padding: 45px; }
+      .nested-details .detail-container .comment-box .comment-form {
+        margin: 0 auto;
+        max-width: 60%; }
+        .nested-details .detail-container .comment-box .comment-form label {
+          letter-spacing: 1px;
+          font-size: .9em;
+          font-weight: 100; }
+        .nested-details .detail-container .comment-box .comment-form input {
+          width: 100%;
+          margin-bottom: 10px; }
+        .nested-details .detail-container .comment-box .comment-form textarea {
+          display: block;
+          margin-bottom: 15px; }
+        .nested-details .detail-container .comment-box .comment-form button {
+          width: 100%; }
 
 section.footer {
   background: #232323; }

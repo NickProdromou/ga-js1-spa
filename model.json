@@ -10,673 +10,785 @@
         {
           "category" : "Selecting",
           "action" : "Draw marquee selection from center",
-          "shortcut" : "Option–drag selection",
+          "macKey" : "Option–drag selection",
+          "winKey" : "Alt-Marquee",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Add to a selection",
-          "shortcut" : "Shift click",
+          "macKey" : "Shift click",
+          "winKey" : "Shift click",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Subtract from a selection",
-          "shortcut" : "Option click",
+          "macKey" : "Option click",
+          "winKey" : "Alt click",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Intersect with a selection",
-          "shortcut" : "Shift–Option",
+          "macKey" : "Shift–Option",
+          "winKey" : "Shift-Alt",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Make copy of selection with move tool",
-          "shortcut" : "Option–drag selection",
+          "macKey" : "Option–drag selection",
+          "winKey" : "Alt-Drag Selection",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Make copy of selection when not in move tool",
-          "shortcut" : "Cmd–Option–drag selection",
+          "macKey" : "Cmd–Option–drag selection",
+          "winKey" : "Ctrl-Alt-Drag Selection",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Move selection (in 1-pixel increments)",
-          "shortcut" : "Arrow keys",
+          "macKey" : "Arrow keys",
+          "winKey" : "Arrow Keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Move selection (in 10-pixel increments)",
-          "shortcut" : "Shift–Arrow keys",
+          "macKey" : "Shift–Arrow keys",
+          "winKey" : "Shift–Arrow keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Select all opaque pixels on layer",
-          "shortcut" : "Cmd–click on layer thumbnail (in Layers panel)",
+          "macKey" : "Cmd–click on layer thumbnail (in Layers panel)",
+          "winKey" : "Ctrl-click on Layer Thumbnail (in Layers panel)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Reselect last selection",
-          "shortcut" : "Cmd–Shift–D",
+          "macKey" : "Cmd–Shift–D",
+          "winKey" : "Ctrl-Shift-D",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Feather selection",
-          "shortcut" : "Shift–F6",
+          "macKey" : "Shift–F6",
+          "winKey" : "Shift-F6",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Selecting",
           "action" : "Move marquee while drawing selection",
-          "shortcut" : "Hold Spacebar while drawing marquee",
+          "macKey" : "Hold Spacebar while drawing marquee",
+          "winKey" : "Hold Space while drawing marquee",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Fit on Screen",
-          "shortcut" : "Double-click on Hand tool or Cmd-0",
+          "macKey" : "Double-click on Hand tool or Cmd-0",
+          "winKey" : "Double-click on Hand tool or Ctrl-0",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "100% View Level (Actual Pixels)",
-          "shortcut" : "Double-Click on Zoom Tool or Cmd-Option-0",
+          "macKey" : "Double-Click on Zoom Tool or Cmd-Option-0",
+          "winKey" : "Double-Click on Zoom Tool or Ctrl-Alt-0",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Zoom in",
-          "shortcut" : "Cmd-Space-Click or Cmd-Plus(+)",
+          "macKey" : "Cmd-Space-Click or Cmd-Plus(+)",
+          "winKey" : "Ctrl-Space-Click or Ctrl-Plus(+)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Zoom out",
-          "shortcut" : "Option-Space-Click or Cmd-Minus(–)",
+          "macKey" : "Option-Space-Click or Cmd-Minus(–)",
+          "winKey" : "Alt-Space-Click or Ctrl-Minus(–)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Hide all tools and panels",
-          "shortcut" : "Tab",
+          "macKey" : "Tab",
+          "winKey" : "Tab",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Hide all panels except Toolbox and Options bar",
-          "shortcut" : "Shift-Tab",
+          "macKey" : "Shift-Tab",
+          "winKey" : "Shift-Tab",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Cycle through full screen modes",
-          "shortcut" : "F",
+          "macKey" : "F",
+          "winKey" : "F",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Scroll image left or right in window",
-          "shortcut" : "Cmd-Shift-Page Up/Down",
+          "macKey" : "Cmd-Shift-Page Up/Down",
+          "winKey" : "Ctrl-Shift-Page Up/Down",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Jump/Zoom to part of Image",
-          "shortcut" : "Cmd-drag in Navigator panel",
+          "macKey" : "Cmd-drag in Navigator panel",
+          "winKey" : "Ctrl-drag in Navigator panel",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Viewing",
           "action" : "Toggles layer mask on/off as rubylith overlay",
-          "shortcut" : "backslash",
+          "macKey" : "backslash",
+          "winKey" : "backslash",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Create new layer",
-          "shortcut" : "Cmd–Shift–N",
+          "macKey" : "Cmd–Shift–N",
+          "winKey" : "Ctrl-Shift-N",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Select non-contiguous layers",
-          "shortcut" : "Cmd–click layers",
+          "macKey" : "Cmd–click layers",
+          "winKey" : "Ctrl-Click layers",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers",
+          "action" : "Select contiguous layers",
+          "macKey" : "Click one layer, then Shift-Click another layer",
+          "winKey" : "Click one layer, then Shift-Click another layer",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Delete Layer",
-          "shortcut" : "Delete key",
+          "macKey" : "Delete key",
+          "winKey" : "",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "View contents of layer mask",
-          "shortcut" : "Option–click layer mask icon",
+          "macKey" : "Option–click layer mask icon",
+          "winKey" : "Alt-Click layer mask icon",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Temporarily turn off layer mask",
-          "shortcut" : "Shift–click layer mask icon",
+          "macKey" : "Shift–click layer mask icon",
+          "winKey" : "Shift-Click layer mask icon",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Clone layer as you move it",
-          "shortcut" : "Option–drag",
+          "macKey" : "Option–drag",
+          "winKey" : "Alt-Drag",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Find/Select layer containing object",
-          "shortcut" : "Control–click on object with move tool",
+          "macKey" : "Control–click on object with move tool",
+          "winKey" : "Right-Click on the object with move tool",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Change layer opacity",
-          "shortcut" : "Number keys (with Move tool selected)",
+          "macKey" : "Number keys (with Move tool selected)",
+          "winKey" : "Number keys (with Move tool selected)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Cycle down or up through blending modes",
-          "shortcut" : "Shift–Plus(+) or Minus(–)",
+          "macKey" : "Shift–Plus(+) or Minus(–)",
+          "winKey" : "Shift-Plus(+) or Minus(–)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Change to a specific blending mode",
-          "shortcut" : "(While using move tool) Shift–Option–letter (i.e.: N=Normal, M=Multiply. etc.)",
+          "macKey" : "(While using move tool) Shift–Option–letter (i.e.: N=Normal, M=Multiply. etc.)",
+          "winKey" : "(While using move tool) Shift-Alt-letter (ie: N=Normal, M=Multiply. etc.)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Switch to layer below/above current layer",
-          "shortcut" : "Option –",
+          "macKey" : "Option –",
+          "winKey" : "Alt-[ or Alt-]",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Layers",
           "action" : "Move layer below/above current layer",
-          "shortcut" : "Cmd–[ or Cmd–]",
+          "macKey" : "Cmd–[ or Cmd–]",
+          "winKey" : "Ctrl-[ or Ctrl-]",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Type",
           "action" : "Select all text on layer",
-          "shortcut" : "Double–click on T thumbnail in Layers panel",
+          "macKey" : "Double–click on T thumbnail in Layers panel",
+          "winKey" : "Double-Click on T thumbnail in Layers panel",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Type",
           "action" : "Increase/Decrease size of selected text by 1 pt",
-          "shortcut" : "Cmd–Shift–> or <",
+          "macKey" : "Cmd–Shift–> or <",
+          "winKey" : "Ctrl-Shift-> or <",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Type",
           "action" : "Increase/Decrease size of selected text by 5 pts",
-          "shortcut" : "Cmd–Option–Shift–> or <",
+          "macKey" : "Cmd–Option–Shift–> or <",
+          "winKey" : "Ctrl-Shift-Alt-> or <",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Type",
           "action" : "Increase/Decrease kerning/tracking",
-          "shortcut" : "Option–Right/Left Arrow",
+          "macKey" : "Option–Right/Left Arrow",
+          "winKey" : "Alt-Right/Left Arrow",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Type",
           "action" : "Align text left/center/right",
-          "shortcut" : "Cmd–Shift–L/C/R",
+          "macKey" : "Cmd–Shift–L/C/R",
+          "winKey" : "Ctrl-Shift-L/C/R",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Fill selection with Background color",
-          "shortcut" : "Cmd–Delete",
+          "macKey" : "Cmd–Delete",
+          "winKey" : "Ctrl-Backspace",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Fill selection with Foreground color",
-          "shortcut" : "Option–Delete",
+          "macKey" : "Option–Delete",
+          "winKey" : "Alt-Backspace",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Fill selection with Foreground color using Lock Transparent Pixels",
-          "shortcut" : "Option–Shift–Delete",
+          "macKey" : "Option–Shift–Delete",
+          "winKey" : "Shift-Alt-Backspace",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Fill selection with source state in History panel",
-          "shortcut" : "Cmd–Option–Delete",
+          "macKey" : "Cmd–Option–Delete",
+          "winKey" : "Ctrl-Alt-Backspace",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Display Fill dialog box",
-          "shortcut" : "Shift–Delete",
+          "macKey" : "Shift–Delete",
+          "winKey" : "Shift-Backspace",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Sample as background color",
-          "shortcut" : "Option–click w/Eyedropper tool",
+          "macKey" : "Option–click w/Eyedropper tool",
+          "winKey" : "Alt-Click w/Eyedropper tool",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "To get Move tool",
-          "shortcut" : "While in any painting/editing tool, hold Cmd",
+          "macKey" : "While in any painting/editing tool, hold Cmd",
+          "winKey" : "While in any painting/editing tool-hold Ctrl",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "To get Eyedropper with painting tools",
-          "shortcut" : "Option",
+          "macKey" : "Option",
+          "winKey" : "Alt",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Change paint opacity (with Airbrush OFF)",
-          "shortcut" : "Number keys",
+          "macKey" : "Number keys",
+          "winKey" : "Number keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Change paint opacity (with Airbrush ON)",
-          "shortcut" : "Shift–Number keys",
+          "macKey" : "Shift–Number keys",
+          "winKey" : "Shift-Number keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Change Airbrush flow (with Airbrush ON)",
-          "shortcut" : "Number keys",
+          "macKey" : "Number keys",
+          "winKey" : "Number keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Change Airbrush flow (with Airbrush OFF)",
-          "shortcut" : "Shift–Number keys",
+          "macKey" : "Shift–Number keys",
+          "winKey" : "Shift-Number keys",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "To get Crosshair Cursor",
-          "shortcut" : "While in any painting/editing tool, turn Caps Lock on",
-          "comments" : [],
-          "votes" : "0"
-        },{
-          "category" : "Painting",
-          "action" : "",
-          "shortcut" : "",
+          "macKey" : "While in any painting/editing tool, turn Caps Lock on",
+          "winKey" : "While in any painting/editing tool-turn Caps Lock on",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Decrease/Increase brush size",
-          "shortcut" : " [ or ] ",
+          "macKey" : " [ or ] ",
+          "winKey" : " [ or ] ",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Decrease/Increase hardness of brush",
-          "shortcut" : "Shift–[ or Shift–]",
+          "macKey" : "Shift–[ or Shift–]",
+          "winKey" : "Shift-[ or Shift-]",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Switch between preset brushes",
-          "shortcut" : "< or >",
+          "macKey" : "< or >",
+          "winKey" : "< or >",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Open Brushes pop-up panel",
-          "shortcut" : "Ctrl–click in image window",
+          "macKey" : "Ctrl–click in image window",
+          "winKey" : "Right-Click in Image window",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Erase to History panel's source state",
-          "shortcut" : "Option–Eraser",
+          "macKey" : "Option–Eraser",
+          "winKey" : "Alt-Eraser",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Cycle down or up through blend modes",
-          "shortcut" : "Shift–Plus(+) or Minus(–)",
+          "macKey" : "Shift–Plus(+) or Minus(–)",
+          "winKey" : "Shift-Plus(+) or Minus(–)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Change to a specific blend mode",
-          "shortcut" : "Shift–Opt–letter (i.e.: N=Normal, M=Multiply, etc.)",
+          "macKey" : "Shift–Opt–letter (i.e.: N=Normal, M=Multiply, etc.)",
+          "winKey" : "Shift-Alt-letter (ie: N=Normal, M=Multiply, etc.)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Create fixed color target from within a dialog box",
-          "shortcut" : "Shift–click in image window",
+          "macKey" : "Shift–click in image window",
+          "winKey" : "Shift-Click in image window",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Delete fixed color target",
-          "shortcut" : "Option–click on target with Color Sampler tool",
+          "macKey" : "Option–click on target with Colour Sampler tool",
+          "winKey" : "Alt-Click on target with Colour Sampler tool",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Painting",
           "action" : "Create new Spot Color channel from current selection",
-          "shortcut" : "Cmd–click on New Channel button in Channels panel",
+          "macKey" : "Cmd–click on New Channel button in Channels panel",
+          "winKey" : "Ctrl-Click on New Channel button in Channels panel",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Pen Tool & Paths",
           "action" : "To get Direct Selection tool while using Pen tool",
-          "shortcut" : "Cmd",
+          "macKey" : "Cmd",
+          "winKey" : "Ctrl",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Pen Tool & Paths",
           "action" : "Switch between Add Anchor and Delete Anchor Point tools",
-          "shortcut" : "Option",
+          "macKey" : "Option",
+          "winKey" : "Alt",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Pen Tool & Paths",
           "action" : "Switch from Path Selection tool to Convert Point tool when pointer is over anchor point",
-          "shortcut" : "Cmd–Option",
+          "macKey" : "Cmd–Option",
+          "winKey" : "Ctrl-Alt",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Pen Tool & Paths",
           "action" : "To select a whole path w/Direct Selection tool",
-          "shortcut" : "Option–click",
+          "macKey" : "Option–click",
+          "winKey" : "Alt-click",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Pen Tool & Paths",
           "action" : "Convert path to a selection",
-          "shortcut" : "Cmd–click on path name (in Paths panel)",
+          "macKey" : "Cmd–click on path name (in Paths panel)",
+          "winKey" : "Ctrl-click on path name (in Paths panel)",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Show/Hide Brushes panel",
-          "shortcut" : "F5",
+          "macKey" : "F5",
+          "winKey" : "F5",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Show/Hide Color panel",
-          "shortcut" : "F6",
+          "macKey" : "F6",
+          "winKey" : "F6",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Show/Hide Layers panel",
-          "shortcut" : "F7",
+          "macKey" : "F7",
+          "winKey" : "F7",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Show/Hide Info panel",
-          "shortcut" : "F8",
+          "macKey" : "F8",
+          "winKey" : "F8",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Show/Hide Actions panel",
-          "shortcut" : "Option–F9",
+          "macKey" : "Option–F9",
+          "winKey" : "Alt-F9",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Panels",
           "action" : "Open Adobe Bridge",
-          "shortcut" : "Cmd–Option–O",
+          "macKey" : "Cmd–Option–O",
+          "winKey" : "Ctrl-Alt-O",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Switch between open documents",
-          "shortcut" : "Cmd–Tilde(~)",
+          "macKey" : "Cmd–Tilde(~)",
+          "winKey" : "Ctrl-Tab",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Undo or Redo operations beyond last one",
-          "shortcut" : "Cmd–Option–Z/Cmd–Shift–Z",
+          "macKey" : "Cmd–Option–Z/Cmd–Shift–Z",
+          "winKey" : "Ctrl-Alt-Z/Ctrl-Shift-Z",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Reapply last filter used",
-          "shortcut" : "Cmd–F",
+          "macKey" : "Cmd–F",
+          "winKey" : "Ctrl-F",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Reapply last filter used, but display dialog box to alter settings",
-          "shortcut" : "Cmd–Option–F",
+          "macKey" : "Cmd–Option–F",
+          "winKey" : "Ctrl-Alt-F",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Temporarily switch to Hand tool",
-          "shortcut" : "Spacebar",
+          "macKey" : "Spacebar",
+          "winKey" : "Spacebar",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Reset dialog box",
-          "shortcut" : "Hold Option, Cancel turns into Reset Button, click it",
+          "macKey" : "Hold Option, Cancel turns into Reset Button, click it",
+          "winKey" : "Hold Alt, Cancel turns into Reset Button, Click it",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Increase/Decrease value (in any option field) by 1 unit",
-          "shortcut" : "Up/Down Arrow",
+          "macKey" : "Up/Down Arrow",
+          "winKey" : "Up/Down Arrow",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Increase/Decrease value (in any option field) by 10 units",
-          "shortcut" : "Shift–Up/Down Arrow",
+          "macKey" : "Shift–Up/Down Arrow",
+          "winKey" : "Shift-Up/Down Arrow",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Reapply last transformation",
-          "shortcut" : "Cmd–Shift–T",
+          "macKey" : "Cmd–Shift–T",
+          "winKey" : "Ctrl-Shift-T",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Measure angle between lines (Protractor function)",
-          "shortcut" : "After ruler is drawn, Option–drag end of line with Ruler tool",
+          "macKey" : "After ruler is drawn, Option–drag end of line with Ruler tool",
+          "winKey" : "After ruler is drawn, Alt-Drag end of line with Ruler Tool",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Move Crop/Selection marquee while creating",
-          "shortcut" : "Hold Spacebar while drawing",
+          "macKey" : "Hold Spacebar while drawing",
+          "winKey" : "Hold Space while drawing",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Snap Guide to Ruler ticks",
-          "shortcut" : "Hold Shift while dragging",
+          "macKey" : "Hold Shift while dragging",
+          "winKey" : "Hold Shift while dragging",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Highlight fields in Options bar (n/a for all tools)",
-          "shortcut" : "Return",
+          "macKey" : "Return",
+          "winKey" : "Enter",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Don't snap object edge while moving",
-          "shortcut" : "Hold Control while dragging",
+          "macKey" : "Hold Control while dragging",
+          "winKey" : "Hold Control while dragging",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Switch between all tools within groups",
-          "shortcut" : "Shift key + any letter for tool key",
+          "macKey" : "Shift key + any letter for tool key",
+          "winKey" : "Shift key + any letter for tool key",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Move and Artboard tools",
-          "shortcut" : "V",
+          "macKey" : "V",
+          "winKey" : "V",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Marquee tools",
-          "shortcut" : "M",
+          "macKey" : "M",
+          "winKey" : "M",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Lasso tools",
-          "shortcut" : "L",
+          "macKey" : "L",
+          "winKey" : "L",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Quick Selection, Magic Wand",
-          "shortcut" : "W",
+          "macKey" : "W",
+          "winKey" : "W",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Crop and Slice Tools",
-          "shortcut" : "C",
+          "macKey" : "C",
+          "winKey" : "C",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Eyedropper, 3D Material Eyedropper, Color Sampler, Ruler, Note, Count",
-          "shortcut" : "I",
+          "macKey" : "I",
+          "winKey" : "I",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Spot Healing Brush, Healing Brush, Patch, Content-Aware Move, Red Eye",
-          "shortcut" : "J",
+          "macKey" : "J",
+          "winKey" : "J",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Brush, Pencil, Color Replacement, Mixer Brush",
-          "shortcut" : "B",
+          "macKey" : "B",
+          "winKey" : "B",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Clone Stamp, Pattern Stamp",
-          "shortcut" : "S",
+          "macKey" : "S",
+          "winKey" : "S",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "History Brush, Art History Brush",
-          "shortcut" : "Y",
+          "macKey" : "Y",
+          "winKey" : "Y",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Miscellaneous Good Stuff",
           "action" : "Eraser tools",
-          "shortcut" : "E",
+          "macKey" : "E",
+          "winKey" : "E",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Gradient, Paint Bucket, 3D Material Drop",
-          "shortcut" : "G",
+          "macKey" : "G",
+          "winKey" : "G",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Dodge, Burn, Sponge",
-          "shortcut" : "O",
+          "macKey" : "O",
+          "winKey" : "O",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Pen tools",
-          "shortcut" : "P",
+          "macKey" : "P",
+          "winKey" : "P",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Type tools",
-          "shortcut" : "T",
+          "macKey" : "T",
+          "winKey" : "T",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Path Selection, Direct Selection",
-          "shortcut" : "A",
+          "macKey" : "A",
+          "winKey" : "A",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Rectangle, Rounded Rectangle, Ellipse, Polygon, Line, Custom Shape",
-          "shortcut" : "U",
+          "macKey" : "U",
+          "winKey" : "U",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Hand",
-          "shortcut" : "H",
+          "macKey" : "H",
+          "winKey" : "H",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Rotate View",
-          "shortcut" : "R",
+          "macKey" : "R",
+          "winKey" : "R",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Zoom",
-          "shortcut" : "Z",
+          "macKey" : "Z",
+          "winKey" : "Z",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Default colours",
-          "shortcut" : "Z",
+          "macKey" : "D",
+          "winKey" : "D",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Switch Foreground and Background colors",
-          "shortcut" : "X",
+          "macKey" : "X",
+          "winKey" : "X",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Quick Mask Mode",
-          "shortcut" : "Q",
+          "macKey" : "Q",
+          "winKey" : "Q",
           "comments" : [],
           "votes" : "0"
         }
@@ -686,22 +798,923 @@
       "settings" :{
         "mac":true,
         "win":true,
-        "categories":[]
+        "categories":["selecting","Path Editing","Painting and Transforming","Shapes (While Drawing)","Viewing & Guides","Type
+","Panel Shortcuts / Function Keys","Layers Panel Shortcuts","Color Panel Shortcuts","Swatches Panel Shortcuts","Misc","tools"]
       },
       "keyList" : [
         {
-          "category" : "X",
-          "action" : "X",
-          "shortcut" : "X",
+          "category" : "selecting",
+          "action" : "To access Selection or Direction Selection tool (whichever was used last) at any time",
+          "macKey" : "Command",
+          "winKey" : "Control",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "To switch between Selection and Direct Selection tools",
+          "macKey" : "Cmd-Option-Tab",
+          "winKey" : "Ctrl-Alt-Tab",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "To cycle through tools behind column tool",
+          "macKey" : "Option-click tool",
+          "winKey" : "Alt-click tool",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "To make copy while dragging",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "To add to a selection",
+          "macKey" : "Shift",
+          "winKey" : "Shift",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Move Selection",
+          "macKey" : "Any arrow key",
+          "winKey" : "Any arrow key",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Move Selection 10 pts",
+          "macKey" : "Shift-any arrow key",
+          "winKey" : "Shift-any arrow key",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Lock selected artwork",
+          "macKey" : "Cmd-2",
+          "winKey" : "Cmd-2",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Lock all deselected artwork",
+          "macKey" : "Cmd-Option-Shift-2",
+          "winKey" : "Ctrl-Alt-Shift-2",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Unlock all artwork",
+          "macKey" : "Cmd-Option-2",
+          "winKey" : "Ctrl-Alt-2",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Hide selected artwork",
+          "macKey" : "Cmd-3",
+          "winKey" : "Ctrl-3",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Hide all deselected artwork",
+          "macKey" : "Cmd-Option-Shift-3",
+          "winKey" : "Ctrl-Alt-Shift-3",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "selecting",
+          "action" : "Show all artwork",
+          "macKey" : "Cmd-Option-3",
+          "winKey" : "Ctrl-Alt-Shift-3",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Join and Average at same time",
+          "macKey" : "Cmd-Option-Shift-J",
+          "winKey" : "Ctrl-Alt-Shift-J",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Convert Anchor Point tool from Pen tool",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Switch between Add Anchor Point and Delete Anchor Point tools",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Add Anchor Point tool from Scissors tool",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Move anchor point while drawing with Pen tool",
+          "macKey" : "Spacebar",
+          "winKey" : "Spacebar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Create closed path with Pencil or Paintbrush tool",
+          "macKey" : "When finished drawing, hold Option and release mouse",
+          "winKey" : "When finished drawing, hold Alt and release mouse",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Paths",
+          "action" : "Connect to an open (& selected) path with Pencil",
+          "macKey" : "Cmd-drag",
+          "winKey" : "Ctrl-drag",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Eyedropper tool from Live Paint Bucket tool",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Samples intermediate color from gradient, picture, etc. with eyedropper",
+          "macKey" : "Shift",
+          "winKey" : "Shift",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Sets center point and shows dialog",
+          "macKey" : "Option-click with Tool",
+          "winKey" : "Alt-click with Tool",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Duplicates and transforms selection",
+          "macKey" : "Option-drag",
+          "winKey" : "Alt-drag",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Transform pattern without transforming object",
+          "macKey" : "Tilde(~)-drag",
+          "winKey" : "Tilde(~)-drag",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Scale proportionally with Selection tool",
+          "macKey" : "Shift-drag bounding box",
+          "winKey" : "Shift-drag bounding box",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Scale from center with Selection tool",
+          "macKey" : "Option-drag bounding box",
+          "winKey" : "Alt-drag bounding box",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Move mesh point along path with Mesh tool",
+          "macKey" : "Shift-drag",
+          "winKey" : "Shift-drag",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Add mesh point with Mesh tool without changing color",
+          "macKey" : "Shift-click",
+          "winKey" : "Shift-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "painting and transforming",
+          "action" : "Remove mesh point with Mesh tool",
+          "macKey" : "Option-click",
+          "winKey" : "Alt-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Draw from center",
+          "macKey" : "Option",
+          "winKey" : "Alt",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Draw from center with dialog",
+          "macKey" : "Option-click",
+          "winKey" : "Alt-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Constrain proportion",
+          "macKey" : "Shift",
+          "winKey" : "Shift",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Constrain orientation of polygons, stars, spirals",
+          "macKey" : "Shift",
+          "winKey" : "Shift",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Move object while drawing",
+          "macKey" : "Spacebar",
+          "winKey" : "Spacebar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Add/subtract sides, points, spiral segments",
+          "macKey" : "Up or Down Arrow",
+          "winKey" : "Up or Down Arrow",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Decrease inner radius",
+          "macKey" : "Cmd",
+          "winKey" : "Ctrl",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Shapes",
+          "action" : "Create Continuous duplicates along mouse movement",
+          "macKey" : "Hold tilde(~) while Dragging",
+          "winKey" : "Hold tilde(~) while Dragging",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Get Hand Tool (while NOT editing Type)",
+          "macKey" : "Spacebar",
+          "winKey" : "Spacebar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Get Hand Tool (while editing Type)",
+          "macKey" : "Hold Cmd, then Space. Then continue holding Space but let go of Cmd",
+          "winKey" : "Hold Control, then Space. (This will show the Zoom tool). Let go of Control so you see the Hand tool and immediately start dragging the mouse so you don't end up typing spaces. Be sure to let go of the Spacebar while dragging so you again don't type more spaces.",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Zoom In Tool",
+          "macKey" : "Cmd-Spacebar",
+          "winKey" : "Ctrl-Spacebar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Zoom Out Tool",
+          "macKey" : "Cmd-Option-Spacebar",
+          "winKey" : "Ctrl-Alt-Spacebar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Zoom In to exact size",
+          "macKey" : "Cmd-Spacebar-drag",
+          "winKey" : "Ctrl-Spacebar-drag",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Hide/Show all tools and panels",
+          "macKey" : "Tab",
+          "winKey" : "Tab",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Hide/Show all panels except toolbox",
+          "macKey" : "Shift-Tab",
+          "winKey" : "Shift-Tab",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Switch between horizontal/vertical guide",
+          "macKey" : "hold Option while dragging out a new guide",
+          "winKey" : "Hold Alt while dragging out a new guide",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "viewing & guides",
+          "action" : "Release Guide (turns it into a regular path)",
+          "macKey" : "Cmd-Shift-double-click",
+          "winKey" : "Shift-Ctrl-double-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Decrease/Increase type size",
+          "macKey" : "Cmd-Shift-< or >",
+          "winKey" : "Ctrl-Shift-< or >",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Decrease/Increase leading",
+          "macKey" : "Option arrow up or down",
+          "winKey" : "Alt arrow up or down",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Decrease/Increase kerning/tracking",
+          "macKey" : "Option arrow left or right",
+          "winKey" : "Alt arrow left or right",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Kerning/tracking x 5",
+          "macKey" : "Cmd-Option arrow left or right",
+          "winKey" : "Ctrl-Alt arrow left or right",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Decrease/Increase baseline shift",
+          "macKey" : "Shift-Option arrow down or up",
+          "winKey" : "Shift-Alt arrow down or up",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Baseline shift x 5",
+          "macKey" : "Cmd-Option-Shift arrow down or up",
+          "winKey" : "Ctrl-Alt-Shift arrow down or up",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Align type left, right, center",
+          "macKey" : "Cmd-Shift-L, R, C",
+          "winKey" : "Ctrl-Shift-L, R, C",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Align type left, right, center",
+          "macKey" : "Cmd-Shift-L, R, C",
+          "winKey" : "Ctrl-Shift-L, R, C",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Justify with last line left aligned",
+          "macKey" : "Cmd-Shift-J",
+          "winKey" : "Ctrl-Shift-J",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Justify all line",
+          "macKey" : "Cmd-Shift-F",
+          "winKey" : "Ctrl-Shift-F",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Reset horizontal/vertical scale to 100%",
+          "macKey" : "Cmd-Shift-X",
+          "winKey" : "Ctrl-Shift-X",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "type",
+          "action" : "Reset kerning or tracking to 0",
+          "macKey" : "Cmd-Option-Q",
+          "winKey" : "Ctrl-Alt-Q",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Brushes",
+          "macKey" : "F5",
+          "winKey" : "F5",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Color",
+          "macKey" : "F6",
+          "winKey" : "F6",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Layers",
+          "macKey" : "F7",
+          "winKey" : "F7",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Info",
+          "macKey" : "Cmd-F8",
+          "winKey" : "Ctrl-F8",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Gradient",
+          "macKey" : "Cmd-F9",
+          "winKey" : "Cmd-F9",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Stroke",
+          "macKey" : "Cmd-F10",
+          "winKey" : "Ctrl-F10",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Attributes",
+          "macKey" : "Cmd-F11",
+          "winKey" : "Ctrl-F11",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Revert file",
+          "macKey" : "F12",
+          "winKey" : "F12",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Graphic Styles",
+          "macKey" : "Shift-F5",
+          "winKey" : "Shift-F5",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Appearance",
+          "macKey" : "Shift-F6",
+          "winKey" : "Shift-F6",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Align",
+          "macKey" : "Shift-F7",
+          "winKey" : "Shift-F7",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Transform",
+          "macKey" : "Shift-F8",
+          "winKey" : "Shift-F8",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Pathfinder",
+          "macKey" : "Shift-Cmd-F9",
+          "winKey" : "Shift-Ctrl-F9",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Transparency",
+          "macKey" : "Shift-Cmd-F10",
+          "winKey" : "Shift-Ctrl-F10",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "panel shortcuts/ function keys",
+          "action" : "Show/Hide Symbols",
+          "macKey" : "Shift-Cmd-F11",
+          "winKey" : "Shift-Ctrl-F11",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "To create new layer and edit properties",
+          "macKey" : "Option-click new layer button",
+          "winKey" : "Alt-click new layer button",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "Toggle layer between Preview/Outline mode",
+          "macKey" : "Cmd-click on eye",
+          "winKey" : "Ctrl-click on eye",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "Show layer while turningoff all others",
+          "macKey" : "Option-click on eye",
+          "winKey" : "Alt-click on eye",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "Select all items on layer",
+          "macKey" : "Option-click layer name",
+          "winKey" : "Alt-click layer name",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "Copy selected item to different layer",
+          "macKey" : "Option-drag selection square in Layers panel",
+          "winKey" : "Alt-drag selection square in Layers panel",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "To create the new layer at the top of list",
+          "macKey" : "Cmd-click",
+          "winKey" : "Ctrl-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Layers Panel Shortcuts",
+          "action" : "To create the new layer below selected layer",
+          "macKey" : "Cmd-Option-click",
+          "winKey" : "Ctrl-Alt-click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "color panel",
+          "action" : "Saturate/Desaturate current color",
+          "macKey" : "Shift-drag color slider",
+          "winKey" : "Shift-drag color slider",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "color panel",
+          "action" : "Change Color Mode",
+          "macKey" : "Shift-click color bar",
+          "winKey" : "Shift-click color bar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "color panel",
+          "action" : "Select compliment of current color",
+          "macKey" : "Cmd-click color bar",
+          "winKey" : "Ctrl-click color bar",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Swatches Panel",
+          "action" : "Create a swatch as a global color",
+          "macKey" : "Hold Cmd-Shift while creating",
+          "winKey" : "Hold Crtl–Shift while creating",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Swatches Panel",
+          "action" : "Replace a swatch with another",
+          "macKey" : "Option-drag new swatch over old",
+          "winKey" : "Alt-drag new swatch over old",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Misc",
+          "action" : "(In any panel) Apply a value, but keep value highlighted in panel",
+          "macKey" : "Shift-Return",
+          "winKey" : "Shift-Return",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Misc",
+          "action" : "Create New Symbol",
+          "macKey" : "F8",
+          "winKey" : "F8",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Misc",
+          "action" : "Swap Colors in a Gradient",
+          "macKey" : "Option-Drag a color stop onto another",
+          "winKey" : "Alt-Drag a color stop onto another",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Bring up tool options",
+          "macKey" : "double click tool",
+          "winKey" : "double click tool",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Change tool pointer to cross hair",
+          "macKey" : "CAPS LOCK",
+          "winKey" : "CAPS LOCK",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "constrain movement to 45°, 90°, 135°, or 180°",
+          "macKey" : "Hold down shift",
+          "winKey" : "Hold down shift",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Selection",
+          "macKey" : "V",
+          "winKey" : "V",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Direct Selection",
+          "macKey" : "A",
+          "winKey" : "A",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Magic Wand",
+          "macKey" : "Lasso",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Lasso",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Pen",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Add Anchor point",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Delete Anchor point",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Convert Anchor point",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Type",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Line Segment",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Rectangle",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Ellipse",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Paintbrush",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Pencil",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Blob Brush",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Eraser",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Scissors",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Rotate",
+          "macKey" : "Scale",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Reflect",
+          "macKey" : "Warp",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Free Transform",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Symbol Sprayer",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Column Graph",
+          "macKey" : "Mesh",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Gradient",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Eyedropper",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Blend",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Live Paint Bucket",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Live Paint Selection",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Artboard",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Slice",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Hand",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Zoom",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Swap Fill & Stroke",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Default Fill & Stroke (white fill/black stroke)",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Fill or Stroke w/Color",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Fill or Stroke w/Gradient",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Fill or Stroke w/None",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Cycle through Screen Modes",
+          "macKey" : "",
+          "winKey" : "",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "",
+          "macKey" : "",
+          "winKey" : "",
           "comments" : [],
           "votes" : "0"
         }
       ]
     }
   },
-  "appState" : {
-    "currentState" : "x",
-    "prevState" : "x",
-    "program" : "x"
-  }
+  "userState" : {}
 }

@@ -18,33 +18,23 @@
 <div id="app">
 
 
-  <!-- header render target -->
   <section class="header">
-      <!--- header view --->
       <div class="wrapper">
         <header>
             <h1><span style="font-weight:100;">Welcome text</h1>
-            <!--- nested nav view -->
             <nav>
               <ul>
               <li>Programs</li>
               </ul>
             </nav>
-            <!--- nested nav view -->
         </header>
         </div>
-        <!--- header view --->
     </section>
-    <!-- header render target -->
 
 
-
-
-    <!-- Main-content render target -->
 <section class="main-body-element">
 
   <section class ="nested-page_intro">
-    <!--- Main content view --->
     <div class="wrapper">
       <div class="intro inner-content">
         <h2>Intro header/welcome</h2>
@@ -53,7 +43,7 @@
     </div>
   </section>
 
-<!-- Program-list view -->
+
   <section class ="nested-program-list">
     <div class="wrapper">
       <div class="programs inner-content">
@@ -88,8 +78,8 @@
               <div class="main-info">
                 <h2>Command</h2>
                 <p>Category</p>
+                <button>See more</button>
               </div>
-
               <div class="keyboard-shortcuts">
                 <div class="result">
                   <p>platform</p>
@@ -107,76 +97,113 @@
             </div>
                 <div class="stats">
                   <div class="stats-container">
-                    <p>likes</p> <p>comments</p>
+                    <p>likes 4</p> <p>comments 3</p>
                   </div>
                 </div>
           </article>
-
-          <article class="key-item" id="index">
-            <div class="key-info">
-              <div class="main-info">
-                <h2>Command</h2>
-                <p>Category</p>
-              </div>
-
-              <div class="keyboard-shortcuts">
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-                <div class="stats">
-                  <div class="stats-container">
-                    <p>likes</p> <p>comments</p>
-                  </div>
-                </div>
-          </article>
-
-
-          <article class="key-item" id="index">
-            <div class="key-info">
-              <div class="main-info">
-                <h2>Command</h2>
-                <p>Category</p>
-              </div>
-
-              <div class="keyboard-shortcuts">
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-                <div class="result">
-                  <p>platform</p>
-                    <div class="key">
-                      <p>Hotkey</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-                <div class="stats">
-                  <div class="stats-container">
-                    <p>likes</p> <p>comments</p>
-                  </div>
-                </div>
-          </article>
-
-
       </div>
     </div>
   </section>
 
 
+  <section class="nested-latest">
+    <div class="wrapper">
+      <div class="news-list inner-content">
+        <h2>Latest news header</h2>
+        <article class="article" id="item-index" >
+          <section class="featured-image">
+            <img src="http://placehold.it/200x200"/>
+          </section>
+          <section class="article-content">
+            <a href="#"><h3>post title</h3></a>
+            <h6>excerpt</h6>
+            <a href="">view full article</a>
+          </section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="nested-details">
+    <div class="wrapper">
+      <div class="detail-container">
+        <div class="detail-header">
+          <div class="col">
+            <button>prev</button>
+          </div>
+          <div class="col details">
+            <h2>Command</h2>
+            <span class="program">program</span>
+            <span class="category">category</span>
+          </div>
+          <div class="col">
+            <button class="right">next</button>
+          </div>
+        </div>
+        <div class="key-info">
+          <div class="key">
+            <h4>Platform</h4>
+            <span>key</span>
+          </div>
+          <div class="key">
+            <h4>Platform</h4>
+            <span>Key</span>
+          </div>
+        </div>
+          <div class="comments-list">
+            <h4>Comments</h4>
+            <article class="comment">
+              <div class="avatar">
+                <img src="images/avatar.jpg" />
+              </div>
+              <div class="comment-content">
+                <p class="username">username</p>
+                <p>Comment</p>
+              </div>
+            </article>
+
+            <article class="comment">
+              <div class="avatar">
+                <img src="images/avatar.jpg" />
+              </div>
+              <div class="comment-content">
+                <p class="username">username</p>
+                <p>Comment</p>
+              </div>
+            </article>
+
+
+
+            <article class="comment">
+              <div class="avatar">
+                <img src="images/avatar.jpg" />
+              </div>
+              <div class="comment-content">
+                <p class="username">username</p>
+                <p>Comment</p>
+              </div>
+            </article>
+
+          </div>
+            <div class="comment-box">
+            <h3>Leave a comment</h3>
+            <p>Tell us how you feel about this shortcut, or what you map it to in your workflow.</p>
+            <div class="comment-form">
+              <label>Name</label>
+              <input type="textarea"/>
+              <label>Comment</label>
+              <textarea rows="4" cols="50">
+              </textarea>
+              <button>Submit</button>
+            </div>
+            </div>
+
+
+
+      <div>
+    </div>
+  </section>
 
 </section>
 
