@@ -798,8 +798,7 @@
       "settings" :{
         "mac":true,
         "win":true,
-        "categories":["selecting","Path Editing","Painting and Transforming","Shapes (While Drawing)","Viewing & Guides","Type
-","Panel Shortcuts / Function Keys","Layers Panel Shortcuts","Color Panel Shortcuts","Swatches Panel Shortcuts","Misc","tools"]
+        "categories":["selecting","Path Editing","Painting and Transforming","Shapes (While Drawing)","Viewing & Guides","Type","Panel Shortcuts / Function Keys","Layers Panel Shortcuts","Color Panel Shortcuts","Swatches Panel Shortcuts","Misc","tools"]
       },
       "keyList" : [
         {
@@ -1463,253 +1462,274 @@
         },{
           "category" : "Tools",
           "action" : "Magic Wand",
-          "macKey" : "Lasso",
-          "winKey" : "",
+          "macKey" : "Y",
+          "winKey" : "Y",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Lasso",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Q",
+          "winKey" : "Q",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Pen",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "P",
+          "winKey" : "P",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Add Anchor point",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "+",
+          "winKey" : "+",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Delete Anchor point",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "-",
+          "winKey" : "-",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Convert Anchor point",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-C",
+          "winKey" : "Shift-C",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Type",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "T",
+          "winKey" : "T",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Line Segment",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "backslash",
+          "winKey" : "backslash",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Rectangle",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "M",
+          "winKey" : "M",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Ellipse",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "L",
+          "winKey" : "L",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Paintbrush",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "B",
+          "winKey" : "B",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Pencil",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "N",
+          "winKey" : "N",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Blob Brush",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-B",
+          "winKey" : "Shift-B",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Eraser",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-E",
+          "winKey" : "Shift-E",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Scissors",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "C",
+          "winKey" : "C",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Rotate",
-          "macKey" : "Scale",
-          "winKey" : "",
+          "macKey" : "R",
+          "winKey" : "R",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Scale",
+          "macKey" : "S",
+          "winKey" : "S",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Reflect",
-          "macKey" : "Warp",
-          "winKey" : "",
+          "macKey" : "O",
+          "winKey" : "O",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Warp",
+          "macKey" : "Shift-R",
+          "winKey" : "Shift-R",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Free Transform",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "E",
+          "winKey" : "E",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Symbol Sprayer",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-S",
+          "winKey" : "Shift-S",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Column Graph",
-          "macKey" : "Mesh",
-          "winKey" : "",
+          "macKey" : "J",
+          "winKey" : "J",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Mesh",
+          "macKey" : "U",
+          "winKey" : "U",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Gradient",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "G",
+          "winKey" : "G",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Eyedropper",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "I",
+          "winKey" : "I",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Blend",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "W",
+          "winKey" : "W",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Live Paint Bucket",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "K",
+          "winKey" : "K",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Live Paint Selection",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-L",
+          "winKey" : "Shift-L",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Artboard",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-O",
+          "winKey" : "Shift-O",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Slice",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-K",
+          "winKey" : "Shift-K",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Hand",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "H",
+          "winKey" : "H",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Zoom",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Z",
+          "winKey" : "Z",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "category" : "Tools",
+          "action" : "Toggle between Fill & Stroke",
+          "macKey" : "X",
+          "winKey" : "X",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Swap Fill & Stroke",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "Shift-X",
+          "winKey" : "Shift-X",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Default Fill & Stroke (white fill/black stroke)",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "D",
+          "winKey" : "D",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Fill or Stroke w/Color",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "<",
+          "winKey" : "<",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Fill or Stroke w/Gradient",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : ">",
+          "winKey" : ">",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Fill or Stroke w/None",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "/",
+          "winKey" : "/",
           "comments" : [],
           "votes" : "0"
         },{
           "category" : "Tools",
           "action" : "Cycle through Screen Modes",
-          "macKey" : "",
-          "winKey" : "",
-          "comments" : [],
-          "votes" : "0"
-        },{
-          "category" : "Tools",
-          "action" : "",
-          "macKey" : "",
-          "winKey" : "",
+          "macKey" : "F",
+          "winKey" : "F",
           "comments" : [],
           "votes" : "0"
         }
