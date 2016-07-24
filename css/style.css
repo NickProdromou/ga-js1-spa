@@ -106,6 +106,10 @@ section.header header {
       text-align: left;
       margin-right: auto; }
 
+#return-home {
+  font-weight: 300;
+  text-decoration: underline; }
+
 .filter-controls {
   padding: 10px 15px;
   margin: 25px 0;
@@ -184,13 +188,19 @@ section.header header {
       max-width: 150px;
       margin-right: 1.2em; }
 
+#rate {
+  font-size: .5em;
+  border: none;
+  background: orange;
+  color: #fff;
+  padding: 5px 10px; }
+
 .nested-details {
   background: #e6e6e6;
   padding: 20px 0; }
   .nested-details .program {
     margin: 20px;
-    background: #555;
-    color: #fff;
+    color: #555;
     padding: 15px 10px;
     text-decoration: underline; }
   .nested-details .detail-container {
@@ -203,12 +213,17 @@ section.header header {
       display: flex;
       justify-content: space-between;
       margin-top: 20px; }
-      .nested-details .detail-container .detail-header .col {
+      .nested-details .detail-container .detail-header .col span.category {
+        font-size: .8em; }
+      .nested-details .detail-container .detail-header .col .details {
+        flex: 4; }
+      .nested-details .detail-container .detail-header .col .program {
+        font-size: .8em; }
+      .nested-details .detail-container .detail-header .col .right {
+        float: right;
         flex: 1; }
-        .nested-details .detail-container .detail-header .col .program {
-          font-size: .8em; }
-        .nested-details .detail-container .detail-header .col .right {
-          float: right; }
+      .nested-details .detail-container .detail-header .col .left {
+        flex: 1; }
       .nested-details .detail-container .detail-header .details {
         text-align: center;
         font-size: 1.5em; }

@@ -155,6 +155,10 @@ section.header{
 
 //key list styles
 
+#return-home {
+  font-weight: 300;
+  text-decoration: underline;
+}
 
 
 .filter-controls {
@@ -263,13 +267,21 @@ section.header{
 
 //nested details style
 
+#rate {
+  font-size: .5em;
+  border: none;
+  background: orange;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+
 .nested-details {
   .program {
    margin: 20px;
-   background: #555;
-   color :#fff;
+   color :#555;
    padding: 15px 10px;
-   text-decoration: underline; 
+   text-decoration: underline;
   }
   background: #e6e6e6;
   padding: 20px 0;
@@ -284,12 +296,21 @@ section.header{
       justify-content: space-between;
       margin-top: 20px;
       .col {
-        flex: 1;
+        span.category {
+          font-size: .8em;
+        }
+        .details {
+          flex: 4;
+        }
         .program {
           font-size: .8em;
         }
         .right {
           float: right;
+          flex: 1;
+        }
+        .left {
+          flex: 1;
         }
       }
       .details {

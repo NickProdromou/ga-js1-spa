@@ -21,11 +21,14 @@ var appBody
 //show loader as first screen
 renderLoading(appContainer)
 
+
 //create new userHash for new user
 var currentUser = firebase.database().ref('userState/').push({
   detailView: false,
   listView: false,
-  settings :{
+  settings :{},
+  details :{
+    currentItemIndex: 0
   }
 });
 
@@ -33,33 +36,9 @@ var currentUser = firebase.database().ref('userState/').push({
 state.userHash = currentUser.key;
 
 
-if (currentUser.key) {
-  firebase.database().ref('programs/').once('value')
-    .then((dataSnapshot)=>{
-      state.data = dataSnapshot.val()
-      var programsArray = Object.keys(dataSnapshot.val())
-      state.programs = programsArray
-    }).then(()=>{
-      renderAppContainer(appContainer)
-      appBody = document.querySelector('.main-body-element')
-    })
-
-}
-
-//check if new user created
-  //if new user created, pull list of programs into local storage
-    //render app container from data pulled in
 
 
-
-//store programs into local database
-
-var userState = firebase.database().ref('userState/' + state.userHash + "/")
-
-firebase.database().ref('programs/').on('value',function(snapshot){
-  state.data = snapshot.val()
-  console.log(state.data)
-})
+LoadInitialState()
 
 
   firebase.database().ref('userState/' + state.userHash + "/").on('value',function(snapshot){
@@ -68,7 +47,6 @@ firebase.database().ref('programs/').on('value',function(snapshot){
 
     if (appState.detailView === false) {
       console.log("detailView is false")
-      console.log(appState)
     }
 
     if (appState.detailView === true && appState.listView === false) {
@@ -76,12 +54,14 @@ firebase.database().ref('programs/').on('value',function(snapshot){
       renderDetailView(appBody,index,state.data,appState)
       if(appState.details.currentItemIndex === 0){
         var prevButton = document.querySelector("#prev")
-        prevButton.style.color = "#555"
+        prevButton.style.color = "#fff"
+        prevButton.style.backgroundColor = "#fff"
       }
-
-
-      console.log(appState)
-      console.log(state.data[state.appState.currentProgram].keyList.length)
+      var programLength = state.data[state.appState.currentProgram].keyList.length
+      if(appState.details.currentItemIndex === programLength-1) {
+        var prevButton = document.querySelector("#next")
+        prevButton.style.display = "none"
+      }
     }
 
     if(appState.currentProgram === "Photoshop" &&  appState.listView === true) {
@@ -95,7 +75,6 @@ firebase.database().ref('programs/').on('value',function(snapshot){
       renderFilteredList()
     }
 
-
     if(appState.currentProgram === "illustrator" &&  appState.listView === true) {
       console.log("current app state is illustrator")
       renderKeyList(appBody,appState,state.data.illustrator)
@@ -103,8 +82,111 @@ firebase.database().ref('programs/').on('value',function(snapshot){
     }
 
 
+  if(appState.checkForComments === true && appState.pendingComment !== undefined) {
+    var userCurrentIndex = appState.details.currentItemIndex
+    var program = appState.currentProgram
+    var pendingComment = appState.pendingComment
+    var name = pendingComment.name
+    var body = pendingComment.body
 
+    firebase.database().ref('programs/' + program + '/keyList/' + userCurrentIndex + "/comments").push({
+        comment: {
+          name,
+          body
+        }
   })
+  firebase.database().ref('userState/' + state.userHash + "/").update({
+    checkForComments:false,
+    pendingComment: "waiting"
+  })
+
+}
+
+
+
+if(appState.checkForRating === true) {
+    var userCurrentIndex = appState.details.currentItemIndex
+    var program = appState.currentProgram
+    var pendingComment = appState.pendingComment
+    var  votes = parseInt(state.data[appState.currentProgram].keyList[appState.details.currentItemIndex].votes)
+    console.log(votes)
+    var votePlus1 = votes +1
+
+    firebase.database().ref('programs/' + program + '/keyList/' + userCurrentIndex + "/").update({
+      votes: votePlus1
+  })
+  firebase.database().ref('userState/' + state.userHash + "/").update({
+    checkForRating: "waiting",
+  })
+  }
+
+
+if (appState.checkForRating === "waiting"){
+  renderLoading(appBody)
+
+  firebase.database().ref('programs/').on('value',function(snapshot){
+      state.data = snapshot.val()
+      console.log(state.data)
+      var index = appState.details.currentItemIndex
+      renderDetailView(appBody,index,state.data,appState)
+      if(appState.details.currentItemIndex === 0){
+        var prevButton = document.querySelector("#prev")
+        prevButton.style.display = "none"
+      }
+      var programLength = state.data[appState.currentProgram].keyList.length
+      if(appState.details.currentItemIndex === programLength-1) {
+        var prevButton = document.querySelector("#next")
+        prevButton.style.display = "none"
+      }
+      firebase.database().ref('userState/' + state.userHash + "/").update({
+        checkForRating: null,
+      })
+    })
+}
+
+
+
+if(appState.pendingComment === "waiting") {
+
+  renderLoading(appBody)
+
+  firebase.database().ref('programs/').on('value',function(snapshot){
+      state.data = snapshot.val()
+      console.log(state.data)
+      var index = appState.details.currentItemIndex
+      renderDetailView(appBody,index,state.data,appState)
+      if(appState.details.currentItemIndex === 0){
+        var prevButton = document.querySelector("#prev")
+        prevButton.style.display = "none"
+      }
+      var programLength = state.data[state.appState.currentProgram].keyList.length
+      if(appState.details.currentItemIndex === programLength-1) {
+        var prevButton = document.querySelector("#next")
+        prevButton.style.display = "none"
+      }
+    })
+  }
+
+
+  firebase.database().ref('userState/' + state.userHash + "/").update({
+    pendingComment: "completed",
+  })
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+var userState = firebase.database().ref('userState/' + state.userHash + "/")
+
 
 
 
@@ -135,7 +217,10 @@ delegate('body','click','button', (event) => {
 
 
   if(buttonId === "next") {
-    if(state.appState.details.currentItemIndex <= state.data[state.appState.currentProgram].keyList.length ){
+
+    var programLength = state.data[state.appState.currentProgram].keyList.length
+
+    if(state.appState.details.currentItemIndex !== programLength -1 ){
       var nextNumber = state.appState.details.currentItemIndex +1
       userState.update({
         details: {
@@ -143,6 +228,13 @@ delegate('body','click','button', (event) => {
         }
       })
     }
+  }
+
+  if (buttonId === "rate") {
+    console.log(event.delegateTarget)
+    userState.update({
+      checkForRating: true
+    })
   }
 
 
@@ -156,12 +248,31 @@ delegate('body','click','button', (event) => {
     })
   }
 
+  if(buttonId === "submit-comment") {
+    var commentName = document.querySelector("#comment-name").value
+    var commentBody = document.querySelector("#comment-body").value
+
+    if (commentName.length !== 0 && commentBody.length !== 0) {
+      var newComment = {}
+      newComment.name = commentName
+      newComment.body = commentBody
+      userState.update({
+        checkForComments: true,
+        pendingComment : newComment
+      })
+    }
+  }
+
 });
 
 delegate('body','click','h1', (event)=>{
     if (event.delegateTarget.id === "home"){
-      location.reload();
-  }
+      userState.update({
+        detailView: false,
+        listView: false,
+      })
+      LoadInitialState()
+    }
 })
 
 delegate('body','change','input',(event) => {
@@ -174,17 +285,46 @@ delegate('body','change','input',(event) => {
 })
 
 delegate('body','click','span',(event)=>{
-  if (event.delegateTarget.id === "return") {
+  if (event.delegateTarget.id === "return" ){
     userState.update({
       detailView: false,
       listView: true
     })
   }
+
+  if (event.delegateTarget.id === "return-home") {
+    userState.update({
+      detailView: false,
+      listView: false,
+    })
+    LoadInitialState()
+  }
+
 })
 
 
 
 //render functions
+
+function logSnapshot(snap){
+  console.log(snap.val())
+}
+
+function LoadInitialState(){
+  if (currentUser.key) {
+    firebase.database().ref('programs/').once('value')
+      .then((dataSnapshot)=>{
+        state.data = dataSnapshot.val()
+        var programsArray = Object.keys(dataSnapshot.val())
+        state.programs = programsArray
+      }).then(()=>{
+        renderAppContainer(appContainer)
+        appBody = document.querySelector('.main-body-element')
+      })
+  }
+}
+
+
 function renderAppContainer(into){
   into.innerHTML = `
       ${renderHeader()}
@@ -253,7 +393,7 @@ function renderProgramList(item){
 }
 
 function renderDetailView(into,index,state,user) {
-  into.innerHTML = `<section class="nested-details">
+  var detail = `<section class="nested-details">
     <div class="wrapper">
     <span class="program" id="return">Return to ${user.currentProgram} list</span>
       <div class="detail-container">
@@ -262,8 +402,12 @@ function renderDetailView(into,index,state,user) {
             <button id="prev">prev</button>
           </div>
           <div class="col details">
+
             <h2>${state[user.currentProgram].keyList[index].action}</h2>
-            <span class="category">${state[user.currentProgram].keyList[index].category}</span>
+            <span class="category">category: ${state[user.currentProgram].keyList[index].category}</span>
+            <br>
+            <h5>Votes ${state[user.currentProgram].keyList[index].votes}</h5>
+            <button id="rate">+1 this key</button>
           </div>
           <div class="col">
             <button id="next" class="right">next</button>
@@ -279,35 +423,50 @@ function renderDetailView(into,index,state,user) {
             <span>${state[user.currentProgram].keyList[index].winKey}</span>
           </div>
         </div>
+
           <div class="comments-list">
-            <h4>Comments</h4>
-          ${renderComments()}
+
+            <h4>Comments</h4>`
+
+            if (state[user.currentProgram].keyList[index].comments === undefined) {
+              detail += `<p>Sorry, nobody has commented yet.</p>`
+            } else {
+              var arrayComments = Object.keys(state[user.currentProgram].keyList[index].comments)
+                arrayComments.forEach((i)=>{
+                  detail += `${renderComments(state[user.currentProgram].keyList[index].comments[i])}`
+                })
+            }
+
+          detail += `
+
           </div>
             <div class="comment-box">
+
             <h3>Leave a comment</h3>
             <p>Tell us how you feel about this shortcut, or what you map it to in your workflow.</p>
             <div class="comment-form">
               <label>Name</label>
-              <input type="textarea"/>
+              <input type="textarea" id="comment-name"/>
               <label>Comment</label>
-              <textarea rows="4" cols="50">
+              <textarea rows="4" cols="50" id="comment-body">
               </textarea>
-              <button>Submit</button>
+              <button id="submit-comment">Submit</button>
             </div>
             </div>
       <div>
     </div>
-  // </section>`
+  </section>`
+  into.innerHTML = detail
 }
 
-function renderComments(){
+function renderComments(item){
   return `<article class="comment">
         <div class="avatar">
           <img src="images/avatar.jpg" />
         </div>
         <div class="comment-content">
-          <p class="username">username</p>
-          <p>Comment</p>
+          <p class="username">${item.comment.name}</p>
+          <p>${item.comment.body}</p>
         </div>
       </article>`
 }
@@ -322,6 +481,7 @@ function renderKeyList(into,state,program){
     <div class="wrapper">
       <div class="programs inner-content">
       <h2>${state.currentProgram}</h2>
+      <span class="program" id="return-home">Return home</span>
       <div class="filter-controls">
       ${state.settings.platforms.map((item)=>{
       return `${renderFilters(item)}`
@@ -349,7 +509,6 @@ function renderKeyItems(item,state){
       </div>
       <div class="keyboard-shortcuts">`
       if(state.settings.mac === true){
-        console.log("does this line log?")
         list += `
         <div class="result">
           <p>Mac</p>
@@ -372,8 +531,14 @@ function renderKeyItems(item,state){
   </div>
       <div class="stats">
         <div class="stats-container">
-          <p>likes ${item.votes}</p> <p>comments ${item.comments}</p>
-        </div>
+          <p>votes ${item.votes}</p>`
+          if( item.comments !== undefined) {
+              var arrayOfComments = Object.keys(item.comments)
+                list += `<p>comments ${arrayOfComments.length}</p>`
+          } else {
+            list += `<p>comments 0</p>`
+          }
+          list+= `</div>
       </div>
 </article>`
 
