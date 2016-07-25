@@ -248,7 +248,15 @@ section.header header {
         background: #fff;
         display: flex;
         flex-direction: row;
-        margin: 20px 0; }
+        margin: 20px 0;
+        position: relative; }
+        .nested-details .detail-container .comments-list .comment #delete {
+          padding: .4em .4em;
+          position: relative;
+          position: absolute;
+          top: 0px;
+          right: 0;
+          background: #F44336; }
         .nested-details .detail-container .comments-list .comment img {
           max-width: 120px;
           margin-right: 15px; }

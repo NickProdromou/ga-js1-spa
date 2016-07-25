@@ -1,10 +1,3 @@
-/**
- * Project 3: SPA
- * ====
- *
- * See the README.md for instructions
- */
-
 (function() {
 
 //Create local state object to store and transfer data
@@ -45,10 +38,6 @@ LoadInitialState()
     var appState = snapshot.val()
     state.appState = appState
 
-    if (appState.detailView === false) {
-      console.log("detailView is false")
-    }
-
     if (appState.detailView === true && appState.listView === false) {
       var index = appState.details.currentItemIndex
       renderDetailView(appBody,index,state.data,appState)
@@ -68,11 +57,6 @@ LoadInitialState()
       console.log("Current app state is photoshop")
       renderKeyList(appBody,appState,state.data.Photoshop)
       console.log(appState)
-    }
-
-    if(appState.mac === false && appState.listView) {
-      renderKeyList(appBody,appState,state.data[appState.currentProgram])
-      renderFilteredList()
     }
 
     if(appState.currentProgram === "illustrator" &&  appState.listView === true) {
@@ -165,30 +149,56 @@ if(appState.pendingComment === "waiting") {
         prevButton.style.display = "none"
       }
     })
+    firebase.database().ref('userState/' + state.userHash + "/").update({
+      pendingComment: "completed",
+    })
+
   }
 
 
-  firebase.database().ref('userState/' + state.userHash + "/").update({
-    pendingComment: "completed",
-  })
+
+  if (appState.deleteComment === true ) {
 
 
+    var userCurrentIndex = appState.details.currentItemIndex
+    var program = appState.currentProgram
+    var removeComment = appState.commentID
+
+    firebase.database().ref('programs/' + program + '/keyList/' + userCurrentIndex + "/comments/" + removeComment).remove()
+
+
+    firebase.database().ref('userState/' + state.userHash).update({
+      deleteComment: "waiting",
+    })
+}
+
+if (appState.deleteComment === "waiting") {
+  renderLoading(appBody)
+  firebase.database().ref('programs/').on('value',function(snapshot){
+      state.data = snapshot.val()
+      console.log(state.data)
+      var index = appState.details.currentItemIndex
+      renderDetailView(appBody,index,state.data,appState)
+      if(appState.details.currentItemIndex === 0){
+        var prevButton = document.querySelector("#prev")
+        prevButton.style.display = "none"
+      }
+      var programLength = state.data[state.appState.currentProgram].keyList.length
+      if(appState.details.currentItemIndex === programLength-1) {
+        var prevButton = document.querySelector("#next")
+        prevButton.style.display = "none"
+      }
+    })
+    firebase.database().ref('userState/' + state.userHash + "/").update({
+      deleteComment: null,
+      commentID: null
+    })
+
+}
 
 })
 
-
-
-
-
-
-
-
-
-
 var userState = firebase.database().ref('userState/' + state.userHash + "/")
-
-
-
 
 //event handlers
 
@@ -263,7 +273,19 @@ delegate('body','click','button', (event) => {
     }
   }
 
+  if (buttonId === "delete") {
+
+    //get commentID
+    var commentID = event.delegateTarget.getAttribute('data-comment')
+
+    userState.update({
+      deleteComment: true,
+      commentID: commentID
+    })
+  }
+
 });
+
 
 delegate('body','click','h1', (event)=>{
     if (event.delegateTarget.id === "home"){
@@ -276,11 +298,15 @@ delegate('body','click','h1', (event)=>{
 })
 
 delegate('body','change','input',(event) => {
-  if(event.delegateTarget.id === "Mac") {
+  if(event.delegateTarget.id === "Mac" && event.delegateTarget.checked) {
+    console.log("you clicked the mac input")
     userState.update({
       mac: false
     })
-
+  } else {
+    userState.update({
+      mac: true
+    })
   }
 })
 
@@ -433,7 +459,7 @@ function renderDetailView(into,index,state,user) {
             } else {
               var arrayComments = Object.keys(state[user.currentProgram].keyList[index].comments)
                 arrayComments.forEach((i)=>{
-                  detail += `${renderComments(state[user.currentProgram].keyList[index].comments[i])}`
+                  detail += `${renderComments(state[user.currentProgram].keyList[index].comments[i],i)}`
                 })
             }
 
@@ -453,13 +479,13 @@ function renderDetailView(into,index,state,user) {
               <button id="submit-comment">Submit</button>
             </div>
             </div>
-      <div>
-    </div>
-  </section>`
+        <div>
+      </div>
+    </section>`
   into.innerHTML = detail
 }
 
-function renderComments(item){
+function renderComments(item,index){
   return `<article class="comment">
         <div class="avatar">
           <img src="images/avatar.jpg" />
@@ -467,6 +493,7 @@ function renderComments(item){
         <div class="comment-content">
           <p class="username">${item.comment.name}</p>
           <p>${item.comment.body}</p>
+          <button id="delete" data-comment="${index}">X</button>
         </div>
       </article>`
 }
@@ -545,7 +572,6 @@ function renderKeyItems(item,state){
 return list
 
 }
-
 
 function renderFilters(item){
   return `<label><input type="checkbox" checked id="${item}" value="${item}"> ${item}</label>`
