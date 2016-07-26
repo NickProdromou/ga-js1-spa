@@ -321,6 +321,7 @@ delegate('body','click','h1', (event)=>{
       userState.update({
         detailView: false,
         listView: false,
+        newsFeed: false
       })
       LoadInitialState()
     }
