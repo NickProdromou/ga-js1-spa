@@ -609,11 +609,11 @@ var fetchReddit = (appState) =>{
   var fetchUrl = ""
   if(appState.currentProgram === "Photoshop") {
     fetchUrl = "https://www.reddit.com/r/photoshop/top.json"
-  } else if (appState.currentProgram === "Photoshop") {
+  } else if (appState.currentProgram === "illustrator") {
     fetchUrl = "https://www.reddit.com/r/AdobeIllustrator/top.json"
   }
 renderLoading(appBody)
-    fetch("https://crossorigin.me/" + fetchUrl.toString())
+    fetch(fetchUrl.toString())
       .then((response,err)=> {
         return response.json()
         .then((responseAsJson)=>{
