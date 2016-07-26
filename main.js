@@ -26,7 +26,7 @@ var currentUser = firebase.database().ref('userState/').push({
 });
 
 //store new user hash into a variable for easy reference
-state.userHash = currentUser.key;
+state.userHash = currentUser.key;open
 
 
 
@@ -61,6 +61,7 @@ LoadInitialState()
 
     if(appState.currentProgram === "illustrator" &&  appState.listView === true) {
       console.log("current app state is illustrator")
+
       renderKeyList(appBody,appState,state.data.illustrator)
       console.log(appState)
     }
@@ -196,11 +197,34 @@ if (appState.deleteComment === "waiting") {
 
 }
 
+
+if (appState.newsFeed === true){
+  console.log("is newsfeed rendering?")
+  fetchReddit(appState)
+
+}
+
 })
 
-var userState = firebase.database().ref('userState/' + state.userHash + "/")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //event handlers
+
+
+var userState = firebase.database().ref('userState/' + state.userHash + "/")
 
 delegate('body','click','button', (event) => {
   var buttonId = event.delegateTarget.id
@@ -270,17 +294,22 @@ delegate('body','click','button', (event) => {
         checkForComments: true,
         pendingComment : newComment
       })
+    } else {
+      alert("Comment field cannot be empty")
     }
   }
 
   if (buttonId === "delete") {
-
-    //get commentID
     var commentID = event.delegateTarget.getAttribute('data-comment')
-
     userState.update({
       deleteComment: true,
       commentID: commentID
+    })
+  }
+
+  if (buttonId === "feedView") {
+    userState.update({
+      newsFeed : true
     })
   }
 
@@ -314,7 +343,8 @@ delegate('body','click','span',(event)=>{
   if (event.delegateTarget.id === "return" ){
     userState.update({
       detailView: false,
-      listView: true
+      listView: true,
+      newsFeed: false
     })
   }
 
@@ -367,7 +397,7 @@ function renderHeader(){
   return `<section class="header">
         <div class="wrapper">
           <header>
-              <h1 id="home"><span style="font-weight:100;">Logo</h1>
+              <h1 id="home"><span style="font-weight:100;">keyfficient.ly</h1>
           </header>
           </div>
       </section>`
@@ -377,7 +407,7 @@ function renderFooter(){
   return `<section class="footer">
       <div class="wrapper">
         <footer>
-            <p>Footer with credits and link to github &copy;2016</p>
+            <p>Designed and built with love (and firebase) by <a href="https://github.com/NickProdromou">Nick Prodromou</a> &copy;2016</p>
         </footer>
       </div>
     </section>`
@@ -389,8 +419,8 @@ function renderIntro(){
   return `  <section class ="nested-page_intro">
       <div class="wrapper">
         <div class="intro inner-content">
-          <h2>Intro header/welcome</h2>
-          <p>Explanation of what this app is</p>
+          <h2>Welcome</h2>
+          <p>Welcome to keyfficient.ly. Where we believe that there's always a faster, more efficient way to do perform your tasks.</p>
         </div>
       </div>
     </section>`
@@ -400,7 +430,7 @@ function renderPrograms(state){
   return `  <section class ="nested-program-list">
       <div class="wrapper">
         <div class="programs inner-content">
-        <h2>Program list header</h2>
+        <h2>Select a program</h2>
           <div class="program-grid">
           ${state.programs.map((item)=>{
           return `${renderProgramList(item)}`
@@ -464,10 +494,8 @@ function renderDetailView(into,index,state,user) {
             }
 
           detail += `
-
           </div>
             <div class="comment-box">
-
             <h3>Leave a comment</h3>
             <p>Tell us how you feel about this shortcut, or what you map it to in your workflow.</p>
             <div class="comment-form">
@@ -503,24 +531,24 @@ function renderLoading(into) {
 }
 
 
-function renderKeyList(into,state,program){
+function renderKeyList(into,state,program,articleData){
   var list = `<section class ="nested-key-list">
     <div class="wrapper">
       <div class="programs inner-content">
       <h2>${state.currentProgram}</h2>
+      <div class="nav">
       <span class="program" id="return-home">Return home</span>
-      <div class="filter-controls">
-      ${state.settings.platforms.map((item)=>{
-      return `${renderFilters(item)}`
-    }).join("")}
+      <button id="feedView">See reddit feed</a>
       </div>
+
         <div class="key-list">
         ${program.keyList.map((item)=>{
           return `${renderKeyItems(item,state)}`
         }).join("")}
     </div>
   </div>
-</section>`
+  </section>
+`
 
 into.innerHTML = list
 }
@@ -573,8 +601,90 @@ return list
 
 }
 
-function renderFilters(item){
-  return `<label><input type="checkbox" checked id="${item}" value="${item}"> ${item}</label>`
+// function renderFilters(item){
+//   return `<label><input type="checkbox" checked id="${item}" value="${item}"> ${item}</label>`
+// }
+
+var fetchReddit = (appState) =>{
+  var fetchUrl = ""
+  if(appState.currentProgram === "Photoshop") {
+    fetchUrl = "https://www.reddit.com/r/photoshop/top.json"
+  } else if (appState.currentProgram === "Photoshop") {
+    fetchUrl = "https://www.reddit.com/r/AdobeIllustrator/top.json"
+  }
+renderLoading(appBody)
+    fetch("https://crossorigin.me/" + fetchUrl.toString())
+      .then((response,err)=> {
+        return response.json()
+        .then((responseAsJson)=>{
+
+          state.articleFeed = []
+          var convertArray = Object.keys(responseAsJson.data.children)
+          var itemIndex = 0;
+          convertArray.forEach(function(key){
+            var articleObject = {}
+            articleObject.index = itemIndex;
+            articleObject.link = "http://reddit.com" + responseAsJson.data.children[key].data.permalink;
+            articleObject.image = responseAsJson.data.children[key].data.url;
+            console.log(articleObject.image)
+            articleObject.rating = responseAsJson.data.children[key].data.score;
+            articleObject.category = responseAsJson.data.children[key].data.subreddit;
+            articleObject.name = responseAsJson.data.children[key].data.title;
+            articleObject.snippet = responseAsJson.data.children[key].data.subreddit;
+            state.articleFeed.push(articleObject)
+            itemIndex ++;
+          })
+            renderNewsFeed(appBody,appState,state.articleFeed)
+          console.log(state.articleFeed)
+        })
+      }).catch((err)=>{
+        console.log(err);
+      })
 }
+
+
+function renderNewsFeed(into,state,articleData){
+  var list = `<section class ="nested-article-list">
+    <div class="wrapper">
+      <div class="programs inner-content">
+      <h2>Top posts from ${state.currentProgram} on reddit</h2>
+      <div class="nav">
+      <span class="program" id="return">Return to ${state.currentProgram} list</span>
+      </div>
+        ${renderArticleFeed(articleData)}
+  </div>
+  </section>`
+
+into.innerHTML = list
+}
+
+
+
+function renderArticles(item){
+  console.log(item.image)
+  return `<article class="article">
+    <section class="featured-image">
+      <img src="${item.image}" onerror="this.src='https://worldvectorlogo.com/logos/reddit-alien.svg'" alt="" />
+    </section>
+    <section class="article-content">
+      <h3>${item.name}</h3>
+      <a href="${item.link}" target="_blank">read on Reddit</a>
+    </section>
+    <section class="impressions">
+      ${item.rating} total impressions
+    </section>
+
+  </article>`
+}
+
+function renderArticleFeed(data) {
+  var articleFeed = `<section id="Articles">
+    ${state.articleFeed.map((item)=>{
+    return `${renderArticles(item)}`
+  }).join("")}
+    </section>`
+    return articleFeed
+}
+
 
 })()

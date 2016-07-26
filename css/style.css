@@ -47,7 +47,8 @@ section.header header {
   section.header header h1 {
     color: #888;
     font-size: 2.1em;
-    margin-right: auto; }
+    margin-right: auto;
+    font-size: 1.6em; }
   section.header header nav {
     color: #fff;
     font-size: .9em;
@@ -284,6 +285,48 @@ section.header header {
         .nested-details .detail-container .comment-box .comment-form button {
           width: 100%; }
 
+.nested-article-list {
+  background: #f1f1f1; }
+  .nested-article-list .article {
+    border: 1px solid #eee;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    position: relative; }
+    .nested-article-list .article img {
+      max-width: 120px;
+      margin-right: 15px; }
+    .nested-article-list .article .article-content {
+      padding: 5px; }
+
+#return {
+  margin: 20px;
+  color: #555;
+  padding: 15px 10px;
+  text-decoration: underline; }
+
+.impressions {
+  padding: .4em .4em;
+  position: relative;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background: #F44336;
+  color: #fff;
+  background: #8e8e8e; }
+
+.nav {
+  display: flex; }
+  .nav #return-home {
+    margin-right: auto; }
+  .nav #feedView {
+    background: #b91010;
+    padding: 14px;
+    color: #fff;
+    text-decoration: none;
+    color: #ffffff; }
+
 section.footer {
   background: #232323; }
   section.footer footer {
@@ -295,5 +338,7 @@ section.footer {
       color: #eee;
       text-align: center;
       margin: 0; }
+    section.footer footer a {
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
