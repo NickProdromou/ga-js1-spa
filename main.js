@@ -26,7 +26,7 @@ var currentUser = firebase.database().ref('userState/').push({
 });
 
 //store new user hash into a variable for easy reference
-state.userHash = currentUser.key;open
+state.userHash = currentUser.key;
 
 
 
@@ -321,6 +321,7 @@ delegate('body','click','h1', (event)=>{
       userState.update({
         detailView: false,
         listView: false,
+        newsFeed: false
       })
       LoadInitialState()
     }
@@ -540,7 +541,6 @@ function renderKeyList(into,state,program,articleData){
       <span class="program" id="return-home">Return home</span>
       <button id="feedView">See reddit feed</a>
       </div>
-
         <div class="key-list">
         ${program.keyList.map((item)=>{
           return `${renderKeyItems(item,state)}`
@@ -609,7 +609,7 @@ var fetchReddit = (appState) =>{
   var fetchUrl = ""
   if(appState.currentProgram === "Photoshop") {
     fetchUrl = "https://www.reddit.com/r/photoshop/top.json"
-  } else if (appState.currentProgram === "illustrator") {
+  } else if (appState.currentProgram === "Photoshop") {
     fetchUrl = "https://www.reddit.com/r/AdobeIllustrator/top.json"
   }
 renderLoading(appBody)
