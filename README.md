@@ -8,7 +8,7 @@ I started on paper... I started by mapping out the data, worked out what my keys
 
 After I had worked out what I wanted to do, and the data I was working with, I drew some rough wireframes of screens / views and a typical user flow. I had pretty much worked out what the data I wanted to show was, and how to show it. Being from a design background, I naively had the idea that I would design and build the app.. Oh how wrong I was.
 
-Once I had the views down, and the data mapped... I started to build by views in raw HTML and CSS, I also gave sass a go.. (using SCSS syntax) to streamline styling. I was very much going for speed not best practice, if you look at my styles .scss file, it looks like I've just thrown nested styles on the page, I used flexbox with zero browser prefixing (again, for speed). I stil spent too long on the design.
+Once I had the views down, and the data mapped... I started to build by views in raw HTML and CSS, I also gave sass a go.. (using SCSS syntax) to streamline styling. I was very much going for speed not best practice, if you look at my styles .scss file, it looks like I've just thrown nested styles on the page, I used flexbox with zero browser prefixing (again, for speed). I still spent too long on the design.
 
 Once I was happy with how the views looked, I started building my JSON file, I started with a single program (Photoshop) The outer object looked like this :
 
