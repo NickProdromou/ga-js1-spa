@@ -1,149 +1,101 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit Project #3: Single Page App
+# Keyfficiently
 
-For the final project, you'll be designing and building a web app of your
-choice. This project will test your knowledge of JavaScript and ask you to apply
-everything you've learned in this course. The result will be a web app that you
-can add to your portfolio. You could create anything from: a blog users can
-comment on; an app that allows users to search for social media posts; or even
-an application that logs users geolocations. Work with your instructor to create
-project goals that are realistic given the scope and timing of the class.
+Keyfficiently is a single page application, born from a love of keyboard shortcuts (of which I will henceforth refer to as "Hotkeys"). My idea is essentially a community of people who, like me, have a passion for keyboard shortcuts... They could browse a large variety of hotkeys for various programs, comment on the hotkeys perhaps talk about how they use it in their workflow... leave a vote... create favourites, maybe even build workflows for programs (in the future)... I have very big plans...
 
-## Overview
+## The process
 
-### SPA Architecture
+I started on paper... I started by mapping out the data, worked out what my keys my objects would contain, and the best way to store them. Because I had already worked with a JSON object containing hotkeys.. I had a rough idea of how to structure the data... but in this case there were many more keys... back to this later.
 
-Single Page Applications (SPA) are all the rage today. The single page aspect of
-a SPA refers to a single page coming from the server, such as our `index.html`
-page.  Once loaded, the SPA changes views by using _client-side_ routing, which
-loads partial HTML snippets called templates. The goal for you implementing a
-SPA is to not make users have to refresh the entire DOM every time they need a
-new piece of data to be represented in the UI.
+After I had worked out what I wanted to do, and the data I was working with, I drew some rough wireframes of screens / views and a typical user flow. I had pretty much worked out what the data I wanted to show was, and how to show it. Being from a design background, I naively had the idea that I would design and build the app.. Oh how wrong I was.
 
-![SPA Architecture](https://cloud.githubusercontent.com/assets/25366/8970635/896c4cce-35ff-11e5-96b2-ef7e62784764.png)
+Once I had the views down, and the data mapped... I started to build by views in raw HTML and CSS, I also gave sass a go.. (using SCSS syntax) to streamline styling. I was very much going for speed not best practice, if you look at my styles .scss file, it looks like I've just thrown nested styles on the page, I used flexbox with zero browser prefixing (again, for speed). I stil spent too long on the design.
 
-### Potential Project Ideas
+Once I was happy with how the views looked, I started building my JSON file, I started with a single program (Photoshop) The outer object looked like this :
 
-**Idea 1**
-
-Movie forum site where users can post their favorite movies and rate them.
-
-**Idea 2**
-
-Celebrity follower app that allows users to easily pull all social media data
-from their favorite celebrities.
-
-**Idea 3**
-
-Friend locator site that allows users to see how far away they are from their
-friends.
-
-### Suggested Ways to Get Started
-
-- Think of a problem in the world, or even in your personal life, and apply what
-  you've learned to build an application that can help solve the issue.
-- Research different social media APIs (eg; twitter) and see what kind of
-  information you can use from them.
-- Look at different online [video games](http://phaser.io/examples) for
-  inspiration.
-
----
-
-## Technical Requirements
-
-### Your core application rules:
-
-Use JavaScript to correctly structure the code for a web application:
-
-- Structure your application to be a SPA (single page application)
-- Make HTTP requests to your own Firebase URL
-- Make at least one HTTP request to a third-party server
-- CRUD functionality should be present
-- Perform DOM manipulation via JS (either directly, or with view templates)
-- Listen for events and add interactivity based on user input
-
-**Hosting**
-
-App must be hosted on a third party server. Examples include `now`, GitHub
-Pages, Firebase, and Heroku.
-
-### Best Practices
-
-Your instructor will provide feedback on how well you execute best practices.
-Even though it is not part of the requirements, you should keep these in mind:
-
-- __Clean And Readable Code__. The instructor should be able to read and follow
-  your code easily. Maintain clean and readable code including: consistent
-  indentation, code commenting and use of proper and consistent naming
-  conventions.
-
-- __Object Oriented and/or Functional__. Implement function closures, keep code
-  modular, maintain a separation of concerns, only put code on the global scope
-  when absolutely necessary, favour composition over inheritance (or use
-  prototypal inheritance when you feel appropriate).
-
----
-
-## Getting Started
-
-Begin by "forking" this starter code repository. You can do so by clicking the
-"Fork" icon on the top right of [this
-page](https://github.com/jesstelford/ga-js1-spa). Once complete, clone the
-repository to your computer by running the following commands:
-
-```
-git clone https://github.com/<your-username-here>/ga-js1-spa.git
-cd ga-js1-spa
+```javascript
+		 +{
+  "programs" : {
+    "Photoshop" : {
+      "settings" :{
+        "mac":true,
+        "win":true,
+        "categories":["selecting","viewing","layers","type","painting","pen tool and paths","panels","misc good stuff","tools"]
+      },
 ```
 
-The `ga-js1-spa` directory now contains a copy of this repository.
+I planned on using the settings from the object to control the user state (if a program didn't have keys for mac, then mac would be false by default. I also had an array of categories to potentially filter over...
 
-As you accomplish a feature, be sure to commit it to Git and push to GitHub.
+A typical hotkey inside of the object looked like this:
 
----
+```javascript
 
-## Necessary Deliverables
+ "keyList" : [
+         {
+           "category" : "Selecting",
+           "action" : "Draw marquee selection from center",
+           "shortcut" : "Option–drag selection",
+           "comments" : [],
+           "votes" : "0"
+         },{
 
-* A **production ready web application**, SPA, hosted live on the web.
-* A **new git repository hosted on Github** where codebase is maintained.
-* A 3-5 minute **presentation** including at least 3 technical hurdles, 2 new
-  things you learned, and what you'd like to do next with your app.
+```
 
-### Due Date
+I had added all the photoshop keys, when I realised that I only had the mac keys here, so my objects morphed into something more like this:
 
-Presentations will be held Wednesday July 27th in class.
+```javascript
 
-Your project must be submitted before class starts on Wednesday 27th July (class
-starts at 6pm).
+"keyList" : [
+        {
+          "category" : "Selecting",
+          "action" : "Draw marquee selection from center",
+          "macKey" : "Option–drag selection",
+          "winKey" : "Alt-Marquee",
+          "comments" : [],
+          "votes" : "0"
+        }
 
----
+```
 
-## Project Feedback + Evaluation
+Much better, the languages makes sense, and now there was a key for both Mac and Windows. (yes I know that the votes are a string, I wish I knew at this point)
 
-Students will fork the "ga-js1-spa" application and commit their code as they
-complete pieces of functionality.
+I don't exactly remember the order, but going from my commits it looks like once I had the data mapped, I had to actually start working with firebase, it was a bit of a trial by _fire_.
 
-The instructional team will grade each technical requirement and provide a
-numeric grade on a scale.
+In the end I got it working exactly how I wanted:
 
-- **Technical Requirements**: Did you deliver a project that met all the
-  technical requirements? Given what the class has covered so far, did you build
-  something that was reasonably complex?
-- **Creativity**: Did you add a personal spin or creative element into your
-  project submission? Did you deliver something of value to the end user (not
-  just a hello world response)?
-- **Code Quality**: Did you follow code style guidance and best practices
-  covered in class, such modularity and semantic naming? Did you comment your
-  code as your instructors have in class?
-- **Total**: Your instructors will give you a total score on your project.
+- User opens app
+- A new state is created for that user
+- The user interacts with the app
+- user interaction sends messages to the uniquekey for the current user inside the userState
+- A controller watches for changes to the user state and renders the views conditionally
 
-Each category is scored according to the below, where a `1` is a _pass_.
+By this point, I had a few views working, but I realised that if I wanted to make the detail view work, I needed to go back to my JSON file and add an index for every.single.item key... so I did exactly that, my final key structure looked like this:
 
-Score | Expectations
------ | ------------
-**0** | _Does not meet expectations._
-**1** | _Meets expectactions, good job!_
-**2** | _Exceeds expectations, you wonderful creature, you!_
+```javascript
 
-The total will serve as a helpful overall gauge of whether you met the project
-goals, but __the more important scores are the individual ones__ above, which
-can help you identify where to focus your efforts for the next project!
+"keyList" : [
+        {
+          "index" : 0,
+          "category" : "Selecting",
+          "action" : "Draw marquee selection from center",
+          "macKey" : "Option–drag selection",
+          "winKey" : "Alt-Marquee",
+          "comments" : [],
+          "votes" : "0"
+        },{
+          "index" : 1,
+          "category" : "Selecting",
+          "action" : "Add to a selection",
+          "macKey" : "Shift click",
+          "winKey" : "Shift click",
+          "comments" : [],
+          "votes" : "0"
+        },{
+
+```
+etc...
+
+(YES, votes are still a string)
+
+Once I had the index's for each key, things got very fun, I could pass the current index to the userState.. which made it so the detailed view worked, the same logic was applied to making commenting and voting work.
+
+The code needs a lot of refactoring, but I have a really good idea of how I can make this work at a production scale
