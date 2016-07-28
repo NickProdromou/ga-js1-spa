@@ -13,7 +13,7 @@ Once I had the views down, and the data mapped... I started to build by views in
 Once I was happy with how the views looked, I started building my JSON file, I started with a single program (Photoshop) The outer object looked like this :
 
 ```javascript
-		 +{
+		 {
   "programs" : {
     "Photoshop" : {
       "settings" :{
